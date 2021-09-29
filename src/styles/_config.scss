@@ -1,0 +1,41 @@
+$primary-font: "Nunito Sans", sans-serif;
+$secondary-font: "Nunito", sans-serif;
+
+$beige: #f2eee3;
+$dark: #1c1c21;
+$lightPink: #efe8e6;
+$gold: #ffb800;
+$green: #7bd38e;
+
+$box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$borderRadius: 5px;
+
+$width: 95vw;
+$maxWidth: 1440px;
+$marginBottom: 1rem;
+
+$btn-transition: all 0.2s ease-in-out;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexSpace {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flexEven {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@mixin media-large {
+  @media screen and (min-width: 950px) {
+    @content;
+  }
+}

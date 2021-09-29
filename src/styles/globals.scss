@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Nunito:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import "config";
+@import "../layout/navbar/navbar";
+@import "../layout/navbar/navbar-responsive";
+@import "../components/home/header/header";
+@import "../components/home/header/header-responsive";
+@import "../components/contributers/getContributers";
+
+body {
+  font-family: $primary-font;
+  background-color: $lightPink;
+  margin: 0 auto;
+  width: $width;
+  max-width: $maxWidth;
+  overflow-x: hidden;
+}
+
+body,
+html {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  background-color: unset;
+  border: none;
+  font-family: $secondary-font;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: $btn-transition;
+}
+
+button:focus,
+button:active,
+button:visited {
+  background-color: unset;
+  border: none;
+}

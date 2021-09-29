@@ -1,0 +1,34 @@
+@include media-large {
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 85vh;
+    position: relative;
+    overflow-y: hidden;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 85vh;
+      background-color: rgba(0, 0, 0, 0.3);
+      content: "";
+    }
+
+    .statement-container {
+      max-width: 50%;
+
+      .statement2 {
+        letter-spacing: 0.5vw;
+      }
+    }
+
+    .image-section {
+      max-width: 50%;
+      height: fit-content;
+      padding-top: 3rem;
+    }
+  }
+}

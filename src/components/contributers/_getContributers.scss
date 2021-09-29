@@ -1,0 +1,21 @@
+.contributer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6rem 1rem;
+  position: relative;
+
+  .contributer-name-wrapper {
+    width: 100%;
+    font-family: $secondary-font;
+    z-index: 5;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .contributer-img-wrapper {
+    width: 80%;
+  }
+}
