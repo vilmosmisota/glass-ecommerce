@@ -1,6 +1,6 @@
 import { Icontents, IpropsContents } from "../../../interfaces/interfaces";
 import Image from "next/image";
-import ButtonStripe from "../../buttonStripe/buttonStripe";
+import Link from "next/link";
 
 export default function Header({
   contents,
@@ -35,7 +35,9 @@ export default function Header({
           />
         </div>
         <div className="button-wrapper">
-          <ButtonStripe />
+          <Link href="/shop" passHref>
+            <button>Shop</button>
+          </Link>
         </div>
       </section>
     </header>

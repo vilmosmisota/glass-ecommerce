@@ -1,0 +1,78 @@
+.contact-form {
+  margin: 0 auto;
+  width: $width;
+  max-width: 600px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $beige;
+  border: $border;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap;
+
+    label {
+      padding: 0.5rem 0;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-family: $primary-font;
+      font-size: $font-sizeSmallScreenP;
+    }
+
+    input,
+    textarea {
+      font-size: $font-sizeSmallScreenP;
+    }
+
+    input {
+      width: 70%;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: $borderRadius;
+      background-color: $light;
+    }
+
+    .message-label {
+      align-self: flex-start;
+    }
+
+    textarea {
+      width: 70%;
+      min-height: 150px;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: $borderRadius;
+      background-color: $light;
+      font-family: $primary-font;
+    }
+
+    .submit-form {
+      width: min-content;
+      padding: 0.2rem 1.5rem;
+      background-color: $blue;
+      text-align: center;
+      margin: 0 auto;
+      cursor: pointer;
+      border-radius: $borderRadius;
+      box-shadow: $box-shadow;
+      transition: $btn-transition;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-family: $primary-font;
+
+      &:hover {
+        background-color: $green;
+      }
+    }
+  }
+}

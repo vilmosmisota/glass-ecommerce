@@ -11,7 +11,7 @@ export async function getStaticProps(): Promise<Icontents> {
 
   try {
     const res: EntryCollection<unknown> = await client.getEntries({
-      content_type: "content",
+      content_type: "homePage",
     });
 
     return {

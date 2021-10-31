@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
 
@@ -16,16 +15,20 @@ export default async function checkout(
 ) {
   if (req.method === "POST") {
     try {
-      const { quantity } = req.body;
+      const { quantity, countryCode, total } = req.body;
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         shipping_address_collection: {
-          allowed_countries: ["GB", "IE"],
+          allowed_countries: [countryCode],
         },
         line_items: [
           {
-            price: "price_1JRbelL9MHXMTXOEtQXab1xN",
             quantity,
+            price_data: {
+              currency: "gbp",
+              unit_amount: total * 100,
+              product: "prod_K5nFvibJVjeMzF",
+            },
           },
         ],
         mode: "payment",

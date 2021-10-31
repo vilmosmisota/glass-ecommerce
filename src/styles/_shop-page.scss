@@ -1,0 +1,9 @@
+.shop-page {
+  @include flexCenter;
+  width: $width;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  flex-direction: column;
+  border: $border;
+  background-color: $beige;
+}

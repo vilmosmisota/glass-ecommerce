@@ -1,7 +1,15 @@
 import { loadStripe } from "@stripe/stripe-js";
-import { useState } from "react";
+import { JSXElementConstructor, useState } from "react";
 
-export default function ButtonStripe(): JSX.Element {
+export default function ButtonStripe({
+  countryCode,
+  quantity,
+  total,
+}: {
+  countryCode: string;
+  quantity: number;
+  total: number | null;
+}): JSX.Element {
   const [loading, setLoading] = useState<boolean>(false);
   const stripePromise = loadStripe(
     process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
@@ -9,13 +17,14 @@ export default function ButtonStripe(): JSX.Element {
 
   const handleClick = async (): Promise<void> => {
     setLoading(true);
+    if (total === null) return;
 
     const response = await fetch("/api/checkout/session", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ quantity: 1 }),
+      body: JSON.stringify({ quantity, countryCode, total }),
     }).then((res) => res.json());
 
     if (response.statusCode === 500) {
@@ -39,7 +48,7 @@ export default function ButtonStripe(): JSX.Element {
         handleClick();
       }}
     >
-      Pre-order
+      Checkout
     </button>
   );
 }

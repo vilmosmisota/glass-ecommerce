@@ -4,18 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  margin: 0 auto;
-  margin-bottom: $marginBottom;
-  font-style: $secondary-font;
+  margin: 1.2rem auto;
 
   .logo-container {
     width: 150px;
-    padding: 0 0.5rem;
-    box-shadow: $box-shadow;
-    border-radius: $borderRadius;
-    background-color: $dark;
+    padding: 0 0.9rem;
+    border: $border;
+    background-color: $orange;
     cursor: pointer;
+    transition: $btn-transition;
   }
 
   .nav-lists-wrapper {
@@ -24,7 +21,7 @@
     width: $width;
     height: 90vh;
     z-index: -1;
-    border-radius: 5px;
+    border: $border;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,8 +34,8 @@
     transition: all 0.2s ease-in;
     opacity: 0;
     pointer-events: none;
-    background-color: $dark;
-    color: $beige;
+    background-color: $orange;
+    color: black;
 
     .nav-lists {
       display: flex;
@@ -56,9 +53,10 @@
         text-transform: uppercase;
         transition: $btn-transition;
         cursor: pointer;
+        font-weight: 800;
 
         &:hover {
-          color: $green;
+          color: $blue;
         }
       }
     }
@@ -66,9 +64,8 @@
     .small-scr-icons-wrapper {
       width: 250px;
       font-size: 2.2rem;
-      border: 2px solid $beige;
-      border-radius: 5px;
-      opacity: 0.7;
+      border: $border;
+      // opacity: 0.7;
 
       .small-scr-icons {
         @include flexCenter;
@@ -116,7 +113,6 @@
       height: 0.4rem;
       width: 100%;
       background: black;
-      border-radius: $borderRadius;
       opacity: 1;
       left: 0;
       -webkit-transform: rotate(0deg);

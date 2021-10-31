@@ -13,15 +13,25 @@
       left: 50%;
       width: 1px;
       height: 85vh;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: black;
       content: "";
     }
 
     .statement-container {
       max-width: 50%;
 
+      .statement1,
+      .statement3 {
+        h1 {
+          font-size: 2.2rem;
+        }
+      }
+
       .statement2 {
-        letter-spacing: 0.5vw;
+        h1 {
+          letter-spacing: 0.5vw;
+          font-size: 2.7rem;
+        }
       }
     }
 

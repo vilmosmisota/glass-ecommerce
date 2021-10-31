@@ -1,12 +1,8 @@
 import { Icontents, IpropsContents } from "../interfaces/interfaces";
-import {
-  ContentfulClientApi,
-  createClient,
-  Entry,
-  EntryCollection,
-} from "contentful";
+import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
+import DropDown from "../components/shop/checkOutForm/getCountries";
 import Layout from "../layout/Layout";
-import GetContributers from "../components/contributers/GetContributers";
+import Form from "../components/shop/checkOutForm/form";
 
 export async function getStaticProps(): Promise<Icontents> {
   const client: ContentfulClientApi = createClient({
@@ -16,7 +12,7 @@ export async function getStaticProps(): Promise<Icontents> {
 
   try {
     const res: EntryCollection<unknown> = await client.getEntries({
-      content_type: "contributorsPage",
+      content_type: "shopPage",
     });
 
     return {
@@ -36,22 +32,18 @@ export async function getStaticProps(): Promise<Icontents> {
   }
 }
 
-export default function Contributors({
+export default function Shop({
   contents,
   notFound,
 }: IpropsContents): JSX.Element {
   return (
     <>
       <Layout />
-      <main>
-        <section className="contributors-statment-container">
-          <h1>
-            Collaborations with emerging talent and established practitioners
-            shine light on contemporary projects and overlooked archives from
-            the world of surfing.
-          </h1>
+      <main className="shop-page">
+        <section></section>
+        <section>
+          <Form contents={contents} />
         </section>
-        <GetContributers contents={contents} notFound={notFound} />
       </main>
     </>
   );

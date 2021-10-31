@@ -1,24 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Nunito:wght@300;400;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,300&display=swap");
 @import "config";
 @import "../layout/navbar/navbar";
 @import "../layout/navbar/navbar-responsive";
 @import "../components/home/header/header";
 @import "../components/home/header/header-responsive";
+@import "../styles/contributors-page";
 @import "../components/contributers/getContributers";
+@import "../components/contributers/getContributers-responsive";
+@import "../components/contactForm/contactForm";
+@import "../styles/shop-page";
+@import "../components/shop/checkOutForm/form";
+
+@font-face {
+  font-family: founders-bold;
+  src: url("../../public/fonts/FoundersGrotesk-Bold-03.otf");
+  font-style: bold;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: founders-light-italic;
+  src: url("../../public/fonts/FoundersGrotesk-LightItalic-08.otf");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: founders-regular;
+  src: url("../../public/fonts/FoundersGrotesk-Regular-01.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
 
 body {
   font-family: $primary-font;
-  background-color: $lightPink;
+  background-color: $gray;
   margin: 0 auto;
-  width: $width;
-  max-width: $maxWidth;
   overflow-x: hidden;
 }
 
 body,
 html {
   padding: 0;
+  margin: 0 auto;
 }
 
 a {
@@ -47,14 +74,12 @@ ul {
 button {
   text-align: center;
   text-transform: uppercase;
-  padding: 0.5rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   cursor: pointer;
   background-color: unset;
   border: none;
-  font-family: $secondary-font;
   border-radius: 10px;
   box-shadow: $box-shadow;
-  font-weight: 600;
   font-size: 1rem;
   transition: $btn-transition;
 }

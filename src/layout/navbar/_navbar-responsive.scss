@@ -14,7 +14,6 @@
       transform: scaleY(1);
       opacity: 1;
       pointer-events: initial;
-      box-shadow: $box-shadow;
 
       .nav-lists {
         flex-direction: row;
@@ -23,15 +22,6 @@
 
         & li {
           padding: 0;
-        }
-
-        #nav-shop {
-          color: $gold;
-          font-weight: 700;
-
-          &:hover {
-            color: $green;
-          }
         }
       }
     }
@@ -42,10 +32,9 @@
       display: block;
       width: 150px;
       height: 60px;
-      box-shadow: $box-shadow;
-      border-radius: $borderRadius;
-      background-color: $dark;
-      color: $beige;
+      border: $border;
+      background-color: $orange;
+      color: black;
       @include flexCenter;
 
       .nav-icon {
@@ -59,7 +48,7 @@
           transition: $btn-transition;
 
           &:hover {
-            color: $green;
+            color: $blue;
           }
         }
       }

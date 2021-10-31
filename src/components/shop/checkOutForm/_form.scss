@@ -1,0 +1,59 @@
+.shop-form {
+  width: 85vw;
+  max-width: 300px;
+  @include flexCenter;
+  flex-direction: column;
+  padding: 1.2rem 0;
+  font-size: $font-sizeSmallScreenP;
+
+  .shop-book-img {
+    width: 100%;
+    max-width: 300px;
+    border: $border;
+    margin-bottom: 1.5rem;
+  }
+
+  section,
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.2rem 0;
+  }
+
+  label {
+    .select-countries {
+      width: 50%;
+    }
+
+    select {
+      background-color: transparent;
+      border: $border;
+      padding: 0.2rem 0.4rem;
+    }
+  }
+
+  .total-container {
+    border: $border;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.stripe-btn-wrapper {
+  text-align: center;
+  margin: 1.5rem auto;
+
+  button {
+    background-color: $blue;
+    font-family: $primary-font;
+    font-weight: 800;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+}

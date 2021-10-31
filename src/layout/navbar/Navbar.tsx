@@ -1,13 +1,18 @@
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logoBlack.png";
 import React, { useState, FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-import { FaRegEnvelope } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 
 export const Navbar: FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
+  const { route } = useRouter();
+
+  const setRouteMargin = (): string =>
+    route === "/" ? "nav-container" : "nav-container notHome";
 
   const handleClick = (): void => setToggle(!toggle);
 
@@ -18,7 +23,7 @@ export const Navbar: FC = () => {
     toggle === false ? "hamburger" : "hamburger open";
 
   return (
-    <nav className="nav-container">
+    <nav className={setRouteMargin()}>
       <Link href="/" passHref>
         <section className="logo-container">
           <Image src={logo} layout="responsive" alt="logo" />
@@ -32,13 +37,18 @@ export const Navbar: FC = () => {
           <Link href="/contributors" passHref>
             <li>Contributors</li>
           </Link>
-          <li id="nav-shop">Shop</li>
+          <Link href="/shop" passHref>
+            <li id="nav-shop">Shop</li>
+          </Link>
         </ul>
         <section className="small-scr-icons-wrapper">
           <ul className="small-scr-icons">
-            <li>
-              <FaRegEnvelope />
-            </li>
+            <Link href="/contact" passHref>
+              <li>
+                <AiOutlineMail />
+              </li>
+            </Link>
+
             <li>
               <AiOutlineInstagram />
             </li>
@@ -47,9 +57,11 @@ export const Navbar: FC = () => {
       </section>
       <section className="nav-icons-wrapper">
         <ul className="nav-icon">
-          <li>
-            <FaRegEnvelope />
-          </li>
+          <Link href="/contact" passHref>
+            <li>
+              <AiOutlineMail />
+            </li>
+          </Link>
           <li>
             <AiOutlineInstagram />
           </li>

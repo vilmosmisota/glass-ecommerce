@@ -2,16 +2,10 @@
   @include flexCenter;
   width: $width;
   max-width: $maxWidth;
-  // height: fit-content;
   margin: 0 auto;
   flex-direction: column;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border: $border;
   background-color: $beige;
-  box-shadow: $box-shadow;
-  border-radius: $borderRadius;
-  // @include media-large {
-  //   background-color: red;
-  // }
 
   .statement-container {
     display: flex;
@@ -32,9 +26,10 @@
     .statement1,
     .statement3 {
       align-self: flex-start;
+      font-style: italic;
 
       h1 {
-        font-weight: 300;
+        font-family: $secondary-font-light-italic;
         width: 90%;
         max-width: 400px;
         margin: 0 auto;
@@ -43,10 +38,11 @@
 
     .statement2 {
       h1 {
-        font-weight: 800;
-        font-size: 2rem;
+        font-size: 2.2rem;
         text-align: center;
-        font-family: $secondary-font;
+        font-family: $secondary-font-bold;
+        color: transparent;
+        -webkit-text-stroke: 1px black;
       }
     }
 
@@ -59,7 +55,6 @@
   .image-section {
     width: 100%;
     height: 50%;
-    // border-top: 1px solid rgba(0, 0, 0, 0.3);
     padding-bottom: 2.5rem;
     display: flex;
     align-items: center;
@@ -71,17 +66,20 @@
       max-width: 350px;
       text-align: center;
       margin: 0 auto;
-      box-shadow: $box-shadow;
+      border: $border;
     }
 
     .button-wrapper {
-      padding-top: 2.5rem;
+      padding-top: 1.5rem;
 
       button {
-        background-color: $gold;
+        background-color: $blue;
+        font-family: $primary-font;
+        font-weight: 800;
+        font-size: 1.5rem;
 
         &:hover {
-          background-color: $green;
+          background-color: $orange;
         }
       }
     }

@@ -13,14 +13,67 @@ export default function Result(): JSX.Element {
 
   if (error) return <div>failed to load</div>;
 
+  function Processing() {
+    return (
+      <article>
+        <h1>Processing your order...</h1>
+        <p>
+          Hold tight, your order is being processed. We will email you when your
+          order succeeds.
+        </p>
+      </article>
+    );
+  }
+
+  function Succeeded() {
+    return (
+      <article>
+        <h1>Payment successful</h1>
+        <p>
+          Your order has been placed. We will send you an email with your order
+          details
+        </p>
+      </article>
+    );
+  }
+
+  function RequiresPaymentMethod() {
+    return (
+      <article>
+        <h1>Payment failed</h1>
+        <p>
+          We are sorry, there was an error processing your payment. Please try
+          again with a different payment method.
+        </p>
+      </article>
+    );
+  }
+
+  function ShowResult() {
+    switch (data.payment_intent.status) {
+      case "processing":
+        return <Processing />;
+        break;
+
+      case "requires_payment_method":
+        return <RequiresPaymentMethod />;
+        break;
+
+      case "succeeded":
+        return <Succeeded />;
+        break;
+
+      default:
+        return <h1>Loading...</h1>;
+    }
+  }
+
+  console.log(data);
+
   return (
     <>
       <Layout />
-      <article>
-        <h1>result</h1>
-        <pre>{data ? JSON.stringify(data, null, 2) : "Loading"}</pre>
-        <h2>test</h2>
-      </article>
+      {data ? <ShowResult /> : <h1>loading</h1>}
     </>
   );
 }
