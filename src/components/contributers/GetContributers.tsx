@@ -42,7 +42,7 @@ export default function GetContributers({
               }[]
             ) => ({
               ...prev,
-              [id]: !prev[id],
+              [id]: !prev[id as any],
             })
           );
         };

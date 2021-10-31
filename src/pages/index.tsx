@@ -17,12 +17,14 @@ export async function getStaticProps(): Promise<Icontents> {
     return {
       props: {
         contents: res.items,
+        notFound: false,
       },
     };
   } catch (err) {
     console.log(err);
     return {
       props: {
+        contents: null,
         notFound: true,
       },
     };
