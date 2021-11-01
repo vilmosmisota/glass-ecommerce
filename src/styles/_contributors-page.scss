@@ -2,11 +2,25 @@
   text-align: center;
 
   h1 {
-    font-family: $secondary-font-light-italic;
+    font-family: $secondary-font-light-italic !important;
     width: 90%;
     max-width: 500px;
     margin: 5rem auto;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.photographers-container {
+  .section-title {
+    text-align: center;
+    font-family: $secondary-font-bold;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    padding: 0;
+    margin: 0;
+    transform: translateY(35%);
   }
 }

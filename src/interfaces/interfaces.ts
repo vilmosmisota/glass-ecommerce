@@ -12,6 +12,11 @@ export interface IpropsContents {
   notFound?: boolean;
 }
 
+export interface IpropsPhotographers {
+  photographers: Entry<any>[];
+  notFound?: boolean;
+}
+
 export interface IpropsCountries {
   countriesLists: Array<ICountryLists>;
 }

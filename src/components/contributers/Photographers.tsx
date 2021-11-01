@@ -1,20 +1,16 @@
-import { IpropsContents } from "../../interfaces/interfaces";
+import { IpropsPhotographers } from "../../interfaces/interfaces";
 import Image from "next/image";
 import getColor from "../../utils/getColor";
 import { useState } from "react";
 import { AiOutlineInstagram } from "react-icons/ai";
 
-export default function GetContributers({
-  contents,
+export default function Photographers({
+  photographers,
   notFound,
-}: IpropsContents): JSX.Element {
-  const sortedContributers = contents.sort((a, b) =>
-    a.fields.name.localeCompare(b.fields.name)
-  );
-
+}: IpropsPhotographers): JSX.Element {
   const initialStateForIds: {
     [x: string]: boolean;
-  }[] = sortedContributers.map((el) => {
+  }[] = photographers.map((el) => {
     const idFalse = { [el.sys.id]: false };
     return idFalse;
   });
@@ -26,11 +22,11 @@ export default function GetContributers({
   >(initialStateForIds);
 
   if (notFound) return <h1>404</h1>;
-  if (!contents.length) return <h1>Error</h1>;
+  if (!photographers.length) return <h1>Error</h1>;
 
   return (
     <>
-      {sortedContributers.map((person) => {
+      {photographers.map((person) => {
         const { name, bio, instagram, portfolioImage } = person.fields;
         const id: string = person.sys.id;
 
