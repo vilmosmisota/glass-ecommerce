@@ -28,7 +28,7 @@ export default function Contributors({
       <Layout />
       <main>
         <section className="contributors-statment-container">
-          <p>{content[0].fields.header}</p>
+          <h1>{content[0].fields.header}</h1>
         </section>
         <article className="photographers-container">
           <h1 className="section-title">Featured photographers</h1>

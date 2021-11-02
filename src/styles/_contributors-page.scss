@@ -1,13 +1,13 @@
 .contributors-statment-container {
   text-align: center;
 
-  p {
-    font-family: $secondary-font-light-italic !important;
+  h1 {
     width: 90%;
     max-width: 500px;
     margin: 5rem auto;
     text-transform: uppercase;
     font-size: 1.5rem;
+    font-style: italic;
   }
 }
 
