@@ -90,3 +90,14 @@ button:visited {
   background-color: unset;
   border: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*reset for mobile browsers */
+
+  font-weight: normal;
+}
