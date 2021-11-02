@@ -17,6 +17,11 @@ export interface IpropsPhotographers {
   notFound?: boolean;
 }
 
+export interface IpropsArtists {
+  artists: Entry<any>[];
+  notFound?: boolean;
+}
+
 export interface IpropsCountries {
   countriesLists: Array<ICountryLists>;
 }

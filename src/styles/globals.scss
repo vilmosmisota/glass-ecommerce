@@ -7,32 +7,32 @@
 @import "../styles/contributors-page";
 @import "../components/contributers/photographers";
 @import "../components/contributers/photographers-responsive";
+@import "../components/contributers/artists/artists";
 @import "../components/contactForm/contactForm";
 @import "../styles/shop-page";
 @import "../components/shop/checkOutForm/form";
 
 @font-face {
   font-family: founders-bold;
-  src: url("../../public/fonts/FoundersGrotesk-Bold-03.otf");
+  src: url("../../public/fonts/FoundersGrotesk-Bold-03.otf") format("opentype");
   font-style: bold;
   font-weight: 800;
-  font-display: swap;
 }
 
 @font-face {
   font-family: founders-light-italic;
-  src: url("../../public/fonts/FoundersGrotesk-LightItalic-08.otf");
+  src: url("../../public/fonts/FoundersGrotesk-LightItalic-08.otf")
+    format("opentype");
   font-style: italic;
   font-weight: 300;
-  font-display: swap;
 }
 
 @font-face {
   font-family: founders-regular;
-  src: url("../../public/fonts/FoundersGrotesk-Regular-01.otf");
+  src: url("../../public/fonts/FoundersGrotesk-Regular-01.otf")
+    format("opentype");
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
 }
 
 body {

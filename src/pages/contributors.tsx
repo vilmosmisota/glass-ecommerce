@@ -7,6 +7,7 @@ import {
 } from "contentful";
 import Layout from "../layout/Layout";
 import Photographers from "../components/contributers/Photographers";
+import Artists from "../components/contributers/artists/Artists";
 
 export default function Contributors({
   contents,
@@ -18,6 +19,10 @@ export default function Contributors({
 
   const content = contents.filter((el) => el.fields.role === "content");
 
+  const artists = contents
+    .filter((el) => el.fields.role === "artist")
+    .sort((a, b) => a.fields.name.localeCompare(b.fields.name));
+
   return (
     <>
       <Layout />
@@ -26,8 +31,16 @@ export default function Contributors({
           <h1>{content[0].fields.header}</h1>
         </section>
         <article className="photographers-container">
-          <h1 className="section-title">Photographers</h1>
+          <h1 className="section-title">Featured photographers</h1>
           <Photographers photographers={photographers} notFound={notFound} />
+        </article>
+        <article className="artists-container">
+          <h1 className="section-title">Contributing artists/surfers</h1>
+          <div className="artists-section">
+            <div className="artists-wrapper">
+              <Artists artists={artists} notFound={notFound} />
+            </div>
+          </div>
         </article>
       </main>
     </>

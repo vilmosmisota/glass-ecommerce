@@ -1,0 +1,16 @@
+.person-wrapper {
+  margin: 0.5rem 0.8rem;
+
+  p {
+    text-transform: uppercase;
+    font-family: $secondary-font-bold;
+    font-size: 1rem;
+    transition: $btn-transition;
+    cursor: pointer;
+
+    &:hover {
+      color: transparent;
+      -webkit-text-stroke: 1px black;
+    }
+  }
+}

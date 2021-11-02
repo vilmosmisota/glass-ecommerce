@@ -12,6 +12,7 @@
 }
 
 .photographers-container {
+  margin-bottom: 10rem;
   .section-title {
     text-align: center;
     font-family: $secondary-font-bold;
@@ -21,6 +22,43 @@
     -webkit-text-stroke: 1px black;
     padding: 0;
     margin: 0;
-    transform: translateY(35%);
+  }
+}
+
+.artists-container {
+  .section-title {
+    text-align: center;
+    font-family: $secondary-font-bold;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    padding: 0;
+    margin: 0;
+  }
+
+  .artists-section {
+    @include flexCenter;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    max-height: 1024px;
+    padding: 2rem 0;
+    margin: 0 auto;
+    background-color: $orange;
+
+    .artists-wrapper {
+      width: $width;
+      height: 80vh;
+      max-width: $maxWidth;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: $border;
+      position: relative;
+    }
   }
 }
