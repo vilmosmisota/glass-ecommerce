@@ -1,0 +1,9 @@
+@include media-large {
+  .person-wrapper {
+    margin: 0.5rem 1rem;
+
+    p {
+      font-size: $small-font-LS;
+    }
+  }
+}

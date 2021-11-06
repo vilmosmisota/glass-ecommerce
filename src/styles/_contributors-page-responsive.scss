@@ -1,0 +1,29 @@
+@include media-large {
+  .contributors-statment-container {
+    h1 {
+      margin: 10rem auto;
+
+      font-size: $large-font-LS;
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+
+  .photographers-container {
+    margin-bottom: 10rem;
+
+    .section-title {
+      font-size: $veryLarge-font-LS;
+
+      margin-bottom: 2rem;
+    }
+  }
+
+  .artists-container {
+    .section-title {
+      font-size: $veryLarge-font-LS;
+
+      margin-bottom: 2rem;
+    }
+  }
+}
