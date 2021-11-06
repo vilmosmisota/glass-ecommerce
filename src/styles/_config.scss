@@ -24,9 +24,19 @@ $marginBottom: 1rem;
 
 $btn-transition: all 0.2s ease-in-out;
 
-// Small screen:
+// small screen:
+$verySmall-font-SS: 1rem;
+$small-font-SS: 1.2rem;
+$medium-font-SS: 1.5rem;
+$large-font-SS: 1.8rem;
+$veryLarge-font-SS: 2.2rem;
 
-$font-sizeSmallScreenP: 1.2rem;
+// Large screen:
+$verySmall-font-LS: 1.2rem;
+$small-font-LS: 1.4rem;
+$medium-font-LS: 1.8rem;
+$large-font-LS: 2rem;
+$veryLarge-font-LS: 2.5rem;
 
 @mixin flexCenter {
   display: flex;

@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 85vh;
+    height: 90vh;
     position: relative;
     overflow-y: hidden;
 
@@ -12,7 +12,7 @@
       top: 0;
       left: 50%;
       width: 1px;
-      height: 85vh;
+      height: 90vh;
       background-color: black;
       content: "";
     }
@@ -23,14 +23,13 @@
       .statement1,
       .statement3 {
         h1 {
-          font-size: 2.2rem;
+          font-size: $large-font-LS;
         }
       }
 
       .statement2 {
         h1 {
-          letter-spacing: 0.5vw;
-          font-size: 2.7rem;
+          font-size: $veryLarge-font-LS;
         }
       }
     }
@@ -38,7 +37,25 @@
     .image-section {
       max-width: 50%;
       height: fit-content;
-      padding-top: 3rem;
+
+      .book-title-container {
+        h1 {
+          font-size: $veryLarge-font-LS;
+          font-family: $secondary-font-bold;
+        }
+
+        h2 {
+          font-family: $primary-font;
+          font-style: italic;
+          font-size: $large-font-LS;
+        }
+      }
+
+      .pre-sale-container {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
     }
   }
 }

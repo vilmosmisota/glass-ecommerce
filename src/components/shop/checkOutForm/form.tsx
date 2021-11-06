@@ -10,9 +10,9 @@ export default function Form({ contents }: IpropsContents) {
     countriesLists,
     price,
     defaultShippingFee,
-    description,
+
     euShippingFee,
-    name,
+
     ukShippingFee,
     bookImg,
   } = contents[0].fields;
@@ -21,15 +21,21 @@ export default function Form({ contents }: IpropsContents) {
   const [quantity, setQuantity] = useState<number>(1);
   const [countryCode, setCountryCode] = useState<string>("GB");
   const [shippingFee, setShippingFee] = useState<number>(ukShippingFee);
+  const [shippingRateCode, setShippingRateCode] = useState<string>(
+    "shr_1JswGlL9MHXMTXOEPHogSAGu"
+  );
   const [total, setTotal] = useState<number | null>(null);
 
   useEffect(() => {
     if (countryCode === "GB") {
       setShippingFee(ukShippingFee);
+      setShippingRateCode("shr_1JswGlL9MHXMTXOEPHogSAGu");
     } else if (europe.includes(countryCode)) {
       setShippingFee(euShippingFee);
+      setShippingRateCode("shr_1JswKZL9MHXMTXOE9QfCvC5Q");
     } else {
       setShippingFee(defaultShippingFee);
+      setShippingRateCode("shr_1JswMQL9MHXMTXOESH44OOi4");
     }
   }, [countryCode, ukShippingFee, euShippingFee, defaultShippingFee]);
 
@@ -40,6 +46,8 @@ export default function Form({ contents }: IpropsContents) {
   useEffect(() => {
     setTotal(bookPrice + shippingFee);
   }, [bookPrice, shippingFee]);
+
+  console.log(`this is shipping: ${shippingRateCode}`);
 
   return (
     <>
@@ -109,7 +117,8 @@ export default function Form({ contents }: IpropsContents) {
         <ButtonStripe
           countryCode={countryCode}
           quantity={quantity}
-          total={total}
+          total={price}
+          shippingRateCode={shippingRateCode}
         />
       </div>
     </>

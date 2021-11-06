@@ -26,7 +26,7 @@ export const Navbar: FC = () => {
     <nav className={setRouteMargin()}>
       <Link href="/" passHref>
         <section className="logo-container">
-          <Image src={logo} layout="responsive" alt="logo" />
+          <Image src={logo} layout="responsive" alt="logo" className="logo" />
         </section>
       </Link>
       <section className={toggleNavlists()}>

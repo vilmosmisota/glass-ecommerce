@@ -5,10 +5,12 @@ export default function ButtonStripe({
   countryCode,
   quantity,
   total,
+  shippingRateCode,
 }: {
   countryCode: string;
   quantity: number;
   total: number | null;
+  shippingRateCode: string;
 }): JSX.Element {
   const [loading, setLoading] = useState<boolean>(false);
   const stripePromise = loadStripe(
@@ -24,7 +26,7 @@ export default function ButtonStripe({
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ quantity, countryCode, total }),
+      body: JSON.stringify({ countryCode, total, quantity, shippingRateCode }),
     }).then((res) => res.json());
 
     if (response.statusCode === 500) {
