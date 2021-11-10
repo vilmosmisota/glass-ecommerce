@@ -42,17 +42,19 @@ export default function Shop({
     defaultShippingFee,
     description,
     euShippingFee,
-
     ukShippingFee,
     bookImg,
-    details,
   } = contents[0].fields;
+
+  const details: string[] = contents[0].fields;
 
   function ShowDetails() {
     return details.map((el) => {
-      return <p>{el}</p>;
+      return <p key={el}>{el}</p>;
     });
   }
+
+  console.log(details);
 
   return (
     <Layout>
