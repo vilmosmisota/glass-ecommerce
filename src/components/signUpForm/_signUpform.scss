@@ -1,0 +1,26 @@
+.signUpForm-container {
+  width: 100%;
+  @include flexCenter;
+  flex-direction: column;
+
+  label {
+    font-size: $small-font-SS;
+
+    input {
+      background-color: transparent;
+      border: 1px solid $beige;
+      border-radius: $borderRadius;
+      color: $beige;
+      margin: 0 1.5rem;
+      padding: 0.2rem 1rem;
+    }
+  }
+
+  button {
+    border: none;
+    box-shadow: none;
+    font-size: $medium-font-LS;
+    color: $beige;
+    margin-top: 0.6rem;
+  }
+}

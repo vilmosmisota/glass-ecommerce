@@ -1,0 +1,112 @@
+.footer-wrapper {
+  width: 100vw;
+  background-color: $darkGray;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  @include flexCenter;
+  flex-direction: column;
+  color: $beige;
+
+  .footer-container {
+    @include flexCenter;
+    flex-direction: column;
+    width: $width;
+    max-width: $maxWidth;
+    padding-bottom: 2rem;
+
+    .footer-main-wrapper {
+      border: $border;
+      width: 100%;
+      @include flexCenter;
+      flex-direction: column;
+
+      article {
+        width: 100%;
+        @include flexCenter;
+        flex-direction: column;
+
+        section {
+          width: 100%;
+          text-align: center;
+          padding: 1.2rem;
+          border-bottom: $border;
+          border-collapse: collapse;
+
+          div {
+            margin: 1rem auto;
+
+            h3 {
+              font-family: $secondary-font-bold;
+              font-size: $medium-font-SS;
+            }
+
+            p {
+              font-size: $small-font-SS;
+            }
+
+            figure {
+              font-size: $large-font-SS;
+            }
+          }
+        }
+      }
+      .footer-details-container {
+        width: 100%;
+        padding: 1.5rem;
+
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+
+          li {
+            text-align: center;
+            text-decoration: underline;
+            margin: 1rem 1rem;
+          }
+        }
+      }
+    }
+    .footer-logo-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-top: 1.5rem;
+      padding: 0 1rem;
+
+      .footer-logo-wrapper {
+        width: 150px;
+      }
+      .footer-payment-logo-container {
+        ul {
+          @include flexCenter;
+          flex-wrap: wrap;
+          padding: 0;
+          margin: 0;
+
+          li {
+            font-size: $large-font-SS;
+            color: black;
+            margin: 0 0.5rem;
+            align-self: flex-end;
+            padding: 0;
+          }
+        }
+      }
+    }
+    .copyright-container {
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 0 1rem;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        color: black;
+      }
+    }
+  }
+}

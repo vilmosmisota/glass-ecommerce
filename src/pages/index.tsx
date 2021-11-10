@@ -2,6 +2,7 @@ import Layout from "../layout/Layout";
 import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
 import { Icontents, IpropsContents } from "../interfaces/interfaces";
 import Header from "../components/home/header/Header";
+import HomeBody from "../components/home/body/homeBody";
 
 export async function getStaticProps(): Promise<Icontents> {
   const client: ContentfulClientApi = createClient({
@@ -38,8 +39,10 @@ export default function Home({
   console.log(contents);
   return (
     <>
-      <Layout />
-      <Header contents={contents} notFound={notFound} />
+      <Layout>
+        <Header contents={contents} notFound={notFound} />
+        <HomeBody />
+      </Layout>
     </>
   );
 }

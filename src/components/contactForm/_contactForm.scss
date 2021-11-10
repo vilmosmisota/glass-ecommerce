@@ -1,5 +1,5 @@
 .contact-form {
-  margin: 0 auto;
+  margin: 5rem auto;
   width: $width;
   max-width: 600px;
   height: 70vh;
@@ -9,6 +9,7 @@
   justify-content: space-evenly;
   background-color: $beige;
   border: $border;
+  border-radius: 30px;
 
   h1 {
     text-transform: uppercase;

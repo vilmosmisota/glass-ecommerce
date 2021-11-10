@@ -70,10 +70,5 @@ export default function Result(): JSX.Element {
 
   console.log(data);
 
-  return (
-    <>
-      <Layout />
-      {data ? <ShowResult /> : <h1>loading</h1>}
-    </>
-  );
+  return <Layout>{data ? <ShowResult /> : <h1>loading</h1>}</Layout>;
 }

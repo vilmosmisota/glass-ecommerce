@@ -2,15 +2,18 @@
 @import "config";
 @import "../layout/navbar/navbar";
 @import "../layout/navbar/navbar-responsive";
+@import "../layout/footer/footer";
+@import "../layout/footer/footer-responsive";
 @import "../components/home/header/header";
 @import "../components/home/header/header-responsive";
+@import "../components/home/body/homeBody";
 @import "../styles/contributors-page";
 @import "../styles/contributors-page-responsive";
 @import "../components/contributers/photographers";
 @import "../components/contributers/photographers-responsive";
 @import "../components/contributers/artists/artists";
 @import "../components/contributers/artists/artists-responsive";
-
+@import "../components/signUpForm/signUpform";
 @import "../components/contactForm/contactForm";
 @import "../styles/shop-page";
 @import "../components/shop/checkOutForm/form";
@@ -40,7 +43,14 @@
 
 body {
   font-family: $primary-font;
-  background-color: $gray;
+  // background-color: $gray;
+  background: #c9ccd3;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-blend-mode: lighten;
   margin: 0 auto;
   overflow-x: hidden;
 }

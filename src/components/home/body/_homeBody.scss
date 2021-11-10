@@ -1,0 +1,23 @@
+.homeBody-container {
+  @include flexCenter;
+  margin: 0 auto;
+  width: $width;
+  max-width: $maxWidth;
+  flex-direction: column;
+
+  .sale-line-container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    height: 60px;
+    color: $orange;
+    @include flexCenter;
+    margin-bottom: 5rem;
+
+    h2 {
+      font-size: $large-font-SS;
+      font-family: $secondary-font-bold;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -52,7 +52,7 @@ export default function Form({ contents }: IpropsContents) {
   return (
     <>
       <form className="shop-form">
-        <div className="shop-book-img">
+        {/* <div className="shop-book-img">
           <Image
             src={`https:${bookImg.fields.file.url}`}
             height={bookImg.fields.file.details.image.height}
@@ -61,7 +61,7 @@ export default function Form({ contents }: IpropsContents) {
             className="header-img"
             layout="responsive"
           />
-        </div>
+        </div> */}
         <section>
           <div>
             <p>Price:</p>

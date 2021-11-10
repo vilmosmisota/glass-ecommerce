@@ -1,0 +1,22 @@
+@include media-medium {
+  .footer-wrapper {
+    .footer-container {
+      .footer-main-wrapper {
+        article {
+          flex-direction: row;
+
+          section {
+            height: 250px;
+            border-right: $border;
+
+            div {
+              h3 {
+                font-size: $large-font-LS;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { AiOutlineMail } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { FaEnvelope } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 export const Navbar: FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -45,12 +45,12 @@ export const Navbar: FC = () => {
           <ul className="small-scr-icons">
             <Link href="/contact" passHref>
               <li>
-                <AiOutlineMail />
+                <FaEnvelope />
               </li>
             </Link>
 
             <li>
-              <AiOutlineInstagram />
+              <AiFillInstagram />
             </li>
           </ul>
         </section>
@@ -59,11 +59,11 @@ export const Navbar: FC = () => {
         <ul className="nav-icon">
           <Link href="/contact" passHref>
             <li>
-              <AiOutlineMail />
+              <FaEnvelope />
             </li>
           </Link>
           <li>
-            <AiOutlineInstagram />
+            <AiFillInstagram />
           </li>
         </ul>
       </section>

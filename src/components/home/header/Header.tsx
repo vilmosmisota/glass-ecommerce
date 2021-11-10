@@ -31,9 +31,6 @@ export default function Header({
         </article>
       </section>
       <section className="image-section">
-        {/* <div className="pre-sale-container">
-          <h1>PRE-SALE NOW OPEN</h1>
-        </div> */}
         <div className="book-title-container">
           <h1>GLASS V01</h1>
           <h2>The North Sea</h2>
