@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
         <article className="copyright-container">
           <ul>
-            <li>© Copyright {year()}, Glass VO1</li>
+            <li>© Copyright {year()}, Glass</li>
             <li>Web Design & Development by Vilmos Misota</li>
           </ul>
         </article>
