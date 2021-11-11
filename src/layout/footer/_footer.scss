@@ -1,11 +1,12 @@
 .footer-wrapper {
   width: 100vw;
   background-color: $darkGray;
-  margin-top: 2rem;
+
   padding: 1.5rem 0;
   @include flexCenter;
   flex-direction: column;
   color: $beige;
+  border-top: $border;
 
   .footer-container {
     @include flexCenter;

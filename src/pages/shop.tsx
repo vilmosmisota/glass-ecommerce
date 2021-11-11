@@ -48,6 +48,16 @@ export default function Shop({
     details,
   } = contents[0].fields;
 
+  const ShowDetails = () => {
+    return (
+      <>
+        {details.map((el: string, index: number) => {
+          return <li key={index}>{el}</li>;
+        })}
+      </>
+    );
+  };
+
   return (
     <Layout>
       <main className="shop-page">
@@ -66,7 +76,11 @@ export default function Shop({
               layout="responsive"
             />
           </div>
-          <div></div>
+          <div>
+            <ul>
+              <ShowDetails />
+            </ul>
+          </div>
         </section>
         <section>
           <div>
