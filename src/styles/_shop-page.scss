@@ -55,11 +55,12 @@
     flex-direction: column;
 
     h2 {
-      font-style: italic;
       font-size: $large-font-SS;
-      font-weight: 300;
+      font-weight: 600;
       margin-bottom: 0.5rem;
       text-align: center;
+      color: black;
+      text-transform: uppercase;
     }
     .details-container {
       @include flexCenter;
@@ -74,6 +75,12 @@
           margin: 0.5rem;
         }
       }
+    }
+
+    .checkout-container {
+      width: 100%;
+      @include flexCenter;
+      flex-direction: column;
     }
   }
 }
