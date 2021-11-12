@@ -34,8 +34,8 @@ export default function Contributors({
           <Photographers photographers={photographers} notFound={notFound} />
         </article>
         <article className="artists-container">
-          <h1 className="section-title">Contributing artists/surfers</h1>
           <div className="artists-section">
+            <h1 className="section-title">Contributing artists/surfers</h1>
             <div className="artists-wrapper">
               <Artists artists={artists} notFound={notFound} />
             </div>

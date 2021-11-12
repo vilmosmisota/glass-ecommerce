@@ -101,9 +101,10 @@ button {
   background-color: unset;
   border: none;
   border-radius: 5px;
+  font-weight: 600;
   font-size: $small-font-SS;
   transition: $btn-transition;
-  border: $border;
+  box-shadow: $box-shadow;
 }
 
 button:focus,

@@ -88,13 +88,11 @@
       padding: 1.5rem 0;
 
       button {
-        background-color: $blue;
+        background-color: $light;
 
         font-family: $primary-font;
         font-weight: 600;
         font-size: $small-font-SS;
-
-        border: $border;
 
         &:hover {
           background-color: $orange;

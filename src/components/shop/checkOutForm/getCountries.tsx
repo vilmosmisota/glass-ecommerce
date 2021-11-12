@@ -12,7 +12,11 @@ export default function GetCountries({ countriesLists }: IpropsCountries) {
         const { Country, code } = element;
         return (
           <>
-            <option value={code} key={code}>
+            <option
+              // style={{ backgroundColor: "#4a546f", color: "#e9e9e7" }}
+              value={code}
+              key={code}
+            >
               {Country}
             </option>
           </>

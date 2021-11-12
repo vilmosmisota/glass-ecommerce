@@ -1,6 +1,6 @@
 .shop-form {
   width: 85vw;
-  max-width: 350px;
+  max-width: 400px;
   @include flexCenter;
   flex-direction: column;
   // padding: 1.2rem 0;
@@ -20,6 +20,11 @@
     justify-content: space-between;
     width: 100%;
     margin: 0.2rem 0;
+  }
+
+  option {
+    background-color: $blue;
+    color: $light;
   }
 
   label {
