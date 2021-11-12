@@ -50,6 +50,12 @@
           font-size: $large-font-LS;
         }
       }
+
+      .button-wrapper {
+        button {
+          font-size: $small-font-LS;
+        }
+      }
     }
   }
 }

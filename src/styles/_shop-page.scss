@@ -1,9 +1,79 @@
 .shop-page {
   @include flexCenter;
   width: $width;
-  max-width: $maxWidth;
-  margin: 0 auto;
+  max-width: 1150px;
+  margin: 0 auto 2rem auto;
   flex-direction: column;
-  border: $border;
-  background-color: $beige;
+
+  section {
+    margin: 1rem auto;
+    max-width: 550px;
+  }
+
+  .product-container {
+    background-color: $beige;
+    width: 100%;
+    border: $border;
+    padding: 2rem 1rem;
+    @include flexCenter;
+    flex-direction: column;
+
+    .title-container {
+      text-align: center;
+      margin-bottom: 1rem;
+      h1 {
+        font-size: $veryLarge-font-SS;
+        font-family: $secondary-font-bold;
+      }
+      h2 {
+        font-style: italic;
+        font-size: $large-font-SS;
+        font-weight: 300;
+      }
+    }
+
+    .img-container {
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .description-container {
+      font-size: $small-font-SS;
+      margin-top: 1.5rem;
+      max-width: 500px;
+    }
+  }
+  .checkout-details-container {
+    background-color: #4a546f;
+    width: 100%;
+    border: $border;
+    padding: 2rem 1rem;
+    color: $light;
+    @include flexCenter;
+    flex-direction: column;
+
+    h2 {
+      font-style: italic;
+      font-size: $large-font-SS;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .details-container {
+      @include flexCenter;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+
+      ul {
+        margin: 0 auto;
+        li {
+          list-style: circle;
+          font-size: $verySmall-font-SS;
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
 }

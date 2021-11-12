@@ -3,7 +3,7 @@
   max-width: 300px;
   @include flexCenter;
   flex-direction: column;
-  padding: 1.2rem 0;
+  // padding: 1.2rem 0;
   font-size: $small-font-SS;
 
   .shop-book-img {
@@ -31,6 +31,7 @@
       background-color: transparent;
       border: $border;
       padding: 0.2rem 0.4rem;
+      color: $light;
     }
   }
 
@@ -40,6 +41,10 @@
     margin-top: 1.5rem;
     font-weight: bold;
   }
+
+  .number {
+    color: $beige;
+  }
 }
 
 .stripe-btn-wrapper {
@@ -47,10 +52,8 @@
   margin: 1.5rem auto;
 
   button {
-    background-color: $blue;
+    background-color: $orange;
     font-family: $primary-font;
-    font-weight: 800;
-    font-size: 1.5rem;
 
     &:hover {
       background-color: $green;

@@ -61,12 +61,12 @@ export default function Shop({
   return (
     <Layout>
       <main className="shop-page">
-        <section>
-          <div className="book-title-container">
+        <section className="product-container">
+          <div className="title-container">
             <h1>GLASS V01</h1>
             <h2>The North Sea</h2>
           </div>
-          <div className="header-img-container">
+          <div className="img-container">
             <Image
               src={`https:${bookImg.fields.file.url}`}
               height={bookImg.fields.file.details.image.height}
@@ -76,17 +76,21 @@ export default function Shop({
               layout="responsive"
             />
           </div>
-          <div>
+          <div className="description-container">
+            <p>{description}</p>
+          </div>
+        </section>
+        <section className="checkout-details-container">
+          <div className="details-container">
+            <h2>Product details</h2>
             <ul>
               <ShowDetails />
             </ul>
           </div>
-        </section>
-        <section>
-          <div>
-            <p>{description}</p>
+          <div className="checkout-container">
+            <h2>Checkout</h2>
+            <Form contents={contents} />
           </div>
-          <Form contents={contents} />
         </section>
       </main>
     </Layout>

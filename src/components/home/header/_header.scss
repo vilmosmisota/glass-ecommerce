@@ -89,9 +89,12 @@
 
       button {
         background-color: $blue;
+
         font-family: $primary-font;
-        font-weight: 300;
+        font-weight: 600;
         font-size: $small-font-SS;
+
+        border: $border;
 
         &:hover {
           background-color: $orange;

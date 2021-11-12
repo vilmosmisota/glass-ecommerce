@@ -16,6 +16,7 @@
 @import "../components/signUpForm/signUpform";
 @import "../components/contactForm/contactForm";
 @import "../styles/shop-page";
+@import "../styles/shop-page-responsive";
 @import "../components/shop/checkOutForm/form";
 
 @font-face {
@@ -99,10 +100,10 @@ button {
   cursor: pointer;
   background-color: unset;
   border: none;
-  border-radius: 10px;
-  box-shadow: $box-shadow;
-  font-size: 1rem;
+  border-radius: 5px;
+  font-size: $small-font-SS;
   transition: $btn-transition;
+  border: $border;
 }
 
 button:focus,
