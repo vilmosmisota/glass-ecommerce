@@ -2,6 +2,7 @@ import Layout from "../layout/Layout";
 import { useRouter } from "next/dist/client/router";
 import useSWR from "swr";
 import { fetchGetJSON } from "../utils/api-helper";
+import LoaderIcon from "../components/loaderIcon/loaderIcon";
 
 export default function Result(): JSX.Element {
   const router = useRouter();
@@ -26,13 +27,55 @@ export default function Result(): JSX.Element {
   }
 
   function Succeeded() {
+    const name = data.payment_intent.shipping.name;
+    const id = data.payment_intent.id;
+    const { city, country, line1, line2, postal_code, state } =
+      data.payment_intent.shipping.address;
+    const amount = data.amount_total;
     return (
       <article>
         <h1>Payment successful</h1>
-        <p>
-          Your order has been placed. We will send you an email with your order
-          details
-        </p>
+        <section className="message-container">
+          <h2>Thank you for your purchase, {name}.</h2>
+          <p>We hope that you will enjoy flipping through the photobook.</p>
+          <p>
+            We will send you an email once the order has been processed. If you
+            have any quetions just email us at info@glassphotobook.shop
+          </p>
+        </section>
+        <section className="order-details-container">
+          <h2>Order details</h2>
+
+          <div>
+            <div>Amount Paid:</div>
+            <div>£{amount / 100}</div>
+          </div>
+          <div>
+            <div>Purchase ID:</div>
+            <div>{id}</div>
+          </div>
+          <h3>Shipping:</h3>
+          <div>
+            <div>Country:</div>
+            <div>{country}</div>
+          </div>
+          <div>
+            <div>City:</div>
+            <div>{city}</div>
+          </div>
+          <div>
+            <div>Line 1:</div>
+            <div>{line1}</div>
+          </div>
+          <div>
+            <div>Line 2:</div>
+            <div>{line2}</div>
+          </div>
+          <div>
+            <div>Postal Code:</div>
+            <div>{postal_code}</div>
+          </div>
+        </section>
       </article>
     );
   }
@@ -70,5 +113,11 @@ export default function Result(): JSX.Element {
 
   console.log(data);
 
-  return <Layout>{data ? <ShowResult /> : <h1>loading</h1>}</Layout>;
+  return (
+    <Layout>
+      <main className="result-container">
+        {data ? <ShowResult /> : <LoaderIcon />}
+      </main>
+    </Layout>
+  );
 }

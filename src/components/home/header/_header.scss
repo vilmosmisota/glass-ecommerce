@@ -2,7 +2,8 @@
   @include flexCenter;
   width: $width;
   max-width: $maxWidth;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto;
+  margin-bottom: $marginBottom-SS;
   flex-direction: column-reverse;
   border: $border;
   background-color: $beige;
