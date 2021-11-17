@@ -15,10 +15,9 @@ export default async function checkout(
 ) {
   if (req.method === "POST") {
     try {
-      const { quantity, countryCode, total, shippingRateCode } = req.body;
+      const { quantity, countryCode, total } = req.body;
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
-        shipping_rates: [shippingRateCode],
         shipping_address_collection: {
           allowed_countries: [countryCode],
         },

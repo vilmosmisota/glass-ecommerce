@@ -21,21 +21,16 @@ export default function Form({ contents }: IpropsContents) {
   const [quantity, setQuantity] = useState<number>(1);
   const [countryCode, setCountryCode] = useState<string>("GB");
   const [shippingFee, setShippingFee] = useState<number>(ukShippingFee);
-  const [shippingRateCode, setShippingRateCode] = useState<string>(
-    "shr_1JswGlL9MHXMTXOEPHogSAGu"
-  );
+
   const [total, setTotal] = useState<number | null>(null);
 
   useEffect(() => {
     if (countryCode === "GB") {
       setShippingFee(ukShippingFee);
-      setShippingRateCode("shr_1JswGlL9MHXMTXOEPHogSAGu");
     } else if (europe.includes(countryCode)) {
       setShippingFee(euShippingFee);
-      setShippingRateCode("shr_1JswKZL9MHXMTXOE9QfCvC5Q");
     } else {
       setShippingFee(defaultShippingFee);
-      setShippingRateCode("shr_1JswMQL9MHXMTXOESH44OOi4");
     }
   }, [countryCode, ukShippingFee, euShippingFee, defaultShippingFee]);
 
@@ -44,24 +39,12 @@ export default function Form({ contents }: IpropsContents) {
   }, [quantity, price]);
 
   useEffect(() => {
-    setTotal(bookPrice + shippingFee);
-  }, [bookPrice, shippingFee]);
-
-  console.log(`this is shipping: ${shippingRateCode}`);
+    setTotal(bookPrice + shippingFee * quantity);
+  }, [bookPrice, shippingFee, quantity]);
 
   return (
     <>
       <form className="shop-form">
-        {/* <div className="shop-book-img">
-          <Image
-            src={`https:${bookImg.fields.file.url}`}
-            height={bookImg.fields.file.details.image.height}
-            width={bookImg.fields.file.details.image.width}
-            alt="book cover"
-            className="header-img"
-            layout="responsive"
-          />
-        </div> */}
         <section>
           <div>
             <p>Price:</p>
@@ -101,7 +84,7 @@ export default function Form({ contents }: IpropsContents) {
             <p>Shipping Fee:</p>
           </div>
           <div>
-            <p>£{shippingFee}</p>
+            <p>£{shippingFee * quantity}</p>
           </div>
         </section>
         <section className="total-container">
@@ -117,8 +100,7 @@ export default function Form({ contents }: IpropsContents) {
         <ButtonStripe
           countryCode={countryCode}
           quantity={quantity}
-          total={price}
-          shippingRateCode={shippingRateCode}
+          total={price + shippingFee}
         />
       </div>
     </>

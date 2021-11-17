@@ -44,14 +44,15 @@ export const Navbar: FC = () => {
         <section className="small-scr-icons-wrapper">
           <ul className="small-scr-icons">
             <Link href="/contact" passHref>
-              <li>
-                <FaEnvelope />
-              </li>
+              <li>Contact</li>
             </Link>
-
-            <li>
-              <AiFillInstagram />
-            </li>
+            <a
+              href="https://www.instagram.com/glassphotobook/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li>Instagram</li>
+            </a>
           </ul>
         </section>
       </section>
@@ -62,9 +63,15 @@ export const Navbar: FC = () => {
               <FaEnvelope />
             </li>
           </Link>
-          <li>
-            <AiFillInstagram />
-          </li>
+          <a
+            href="https://www.instagram.com/glassphotobook/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>
+              <AiFillInstagram />
+            </li>
+          </a>
         </ul>
       </section>
       <div

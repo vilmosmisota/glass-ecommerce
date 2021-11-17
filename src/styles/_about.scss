@@ -1,0 +1,44 @@
+.about-container {
+  width: $width;
+  max-width: $maxWidth;
+  margin: 0 auto $marginBottom-SS auto;
+
+  .quote-container {
+    h1 {
+      width: 90%;
+      max-width: 600px;
+      margin: 5rem auto;
+
+      font-size: $large-font-SS;
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+
+  .intro {
+    @include flexCenter;
+    flex-wrap: wrap;
+
+    .portrait-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 1rem;
+    }
+
+    .intro-container {
+      font-size: $small-font-SS;
+      margin: 1rem;
+      max-width: 400px;
+    }
+  }
+
+  .par-container {
+    margin: 1.5rem auto 0 auto;
+    max-width: 500px;
+    p {
+      font-size: $small-font-SS;
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+    }
+  }
+}

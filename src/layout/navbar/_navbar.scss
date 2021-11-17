@@ -51,10 +51,10 @@
         padding: 20% 0;
         margin: 0;
         font-size: 1.9rem;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         transition: $btn-transition;
         cursor: pointer;
-        font-weight: 800;
+        // font-weight: 800;
 
         &:hover {
           color: $blue;
@@ -63,17 +63,16 @@
     }
 
     .small-scr-icons-wrapper {
-      width: 250px;
-      font-size: 2.2rem;
-      border: $border;
-      // opacity: 0.7;
+      font-size: 1.9rem;
+      border-bottom: $border;
+      padding-bottom: 1rem;
 
       .small-scr-icons {
-        @include flexCenter;
+        display: flex;
 
-        & li {
-          padding: 1rem;
-          @include flexCenter;
+        li {
+          font-size: $small-font-SS;
+          margin: 0 1rem;
         }
       }
     }

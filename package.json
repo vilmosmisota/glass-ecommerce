@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.6.2",
     "@stripe/stripe-js": "^1.17.0",
     "contentful": "^8.4.2",
     "next": "^11.1.0",

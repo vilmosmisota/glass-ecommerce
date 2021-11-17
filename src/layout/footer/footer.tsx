@@ -46,7 +46,13 @@ export default function Footer() {
               </div>
               <div>
                 <figure>
-                  <AiFillInstagram />
+                  <a
+                    href="https://www.instagram.com/glassphotobook/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiFillInstagram />
+                  </a>
                 </figure>
               </div>
             </section>
@@ -66,19 +72,23 @@ export default function Footer() {
           </section>
           <section className="footer-payment-logo-container">
             <ul>
-              <li>
-                <FaCcVisa />
-              </li>
-              <li>
-                <FaCcAmex />
-              </li>
-              <li>
-                <FaCcMastercard />
-              </li>
+              <div>
+                <li>
+                  <FaCcVisa />
+                </li>
+                <li>
+                  <FaCcAmex />
+                </li>
+              </div>
+              <div>
+                <li>
+                  <FaCcMastercard />
+                </li>
 
-              <li>
-                <FaCcStripe />
-              </li>
+                <li>
+                  <FaCcStripe />
+                </li>
+              </div>
             </ul>
           </section>
         </div>
