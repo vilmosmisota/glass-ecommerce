@@ -37,11 +37,11 @@ export default function Home({
   notFound,
 }: IpropsContents): JSX.Element {
   return (
+    // <Layout>
     <>
-      <Layout>
-        <Header contents={contents} notFound={notFound} />
-        <HomeBody contents={contents} notFound={notFound} />
-      </Layout>
+      <Header contents={contents} notFound={notFound} />
+      <HomeBody contents={contents} notFound={notFound} />
     </>
+    // </Layout>
   );
 }

@@ -2,17 +2,13 @@ import logo from "../../assets/images/logoBlack.png";
 import React, { useState, FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 import { FaEnvelope } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
 export const Navbar: FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-  const { route } = useRouter();
-
-  const setRouteMargin = (): string =>
-    route === "/" ? "nav-container" : "nav-container notHome";
 
   const handleClick = (): void => setToggle(!toggle);
 
@@ -23,35 +19,39 @@ export const Navbar: FC = () => {
     toggle === false ? "hamburger" : "hamburger open";
 
   return (
-    <nav className={setRouteMargin()}>
+    <nav className="nav-container">
       <Link href="/" passHref>
-        <section className="logo-container">
+        <motion.section
+          className="logo-container"
+          whileHover={{ backgroundColor: "#e9e9e7" }}
+          whileTap={{ scale: 0.95 }}
+        >
           <Image src={logo} layout="responsive" alt="logo" className="logo" />
-        </section>
+        </motion.section>
       </Link>
       <section className={toggleNavlists()}>
         <ul className="nav-lists">
           <Link href="/about" passHref>
-            <li>About</li>
+            <li onClick={handleClick}>About</li>
           </Link>
           <Link href="/contributors" passHref>
-            <li>Contributors</li>
+            <li onClick={handleClick}>Contributors</li>
           </Link>
           <Link href="/shop" passHref>
-            <li id="nav-shop">Shop</li>
+            <li onClick={handleClick}>Shop</li>
           </Link>
         </ul>
         <section className="small-scr-icons-wrapper">
           <ul className="small-scr-icons">
             <Link href="/contact" passHref>
-              <li>Contact</li>
+              <li onClick={handleClick}>Contact</li>
             </Link>
             <a
               href="https://www.instagram.com/glassphotobook/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <li>Instagram</li>
+              <li onClick={handleClick}>Instagram</li>
             </a>
           </ul>
         </section>

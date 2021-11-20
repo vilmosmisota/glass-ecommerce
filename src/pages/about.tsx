@@ -17,34 +17,34 @@ export default function About({
     contents[0].fields;
 
   return (
-    <Layout>
-      <main className="about-container">
-        <section className="quote-container">
-          <h1>{quote}</h1>
+    // <Layout>
+    <main className="about-container">
+      <section className="quote-container">
+        <h1>{quote}</h1>
+      </section>
+      <div className="intro">
+        <picture className="portrait-container">
+          <Image
+            src={`https:${portrait.fields.file.url}`}
+            height={portrait.fields.file.details.image.height}
+            width={portrait.fields.file.details.image.width}
+            alt="portrait of Lewis Arnold"
+            layout="responsive"
+          />
+        </picture>
+        <section className="intro-container">
+          <p>{documentToReactComponents(par1)}</p>
         </section>
-        <div className="intro">
-          <picture className="portrait-container">
-            <Image
-              src={`https:${portrait.fields.file.url}`}
-              height={portrait.fields.file.details.image.height}
-              width={portrait.fields.file.details.image.width}
-              alt="portrait of Lewis Arnold"
-              layout="responsive"
-            />
-          </picture>
-          <section className="intro-container">
-            <p>{documentToReactComponents(par1)}</p>
-          </section>
-        </div>
-        <section className="par-container">
-          <p>{documentToReactComponents(par2)}</p>
-          <p>{documentToReactComponents(par3)}</p>
-          <p>{documentToReactComponents(par4)}</p>
-          <p>{documentToReactComponents(par5)}</p>
-          <p>{documentToReactComponents(par6)}</p>
-        </section>
-      </main>
-    </Layout>
+      </div>
+      <section className="par-container">
+        <p>{documentToReactComponents(par2)}</p>
+        <p>{documentToReactComponents(par3)}</p>
+        <p>{documentToReactComponents(par4)}</p>
+        <p>{documentToReactComponents(par5)}</p>
+        <p>{documentToReactComponents(par6)}</p>
+      </section>
+    </main>
+    // </Layout>
   );
 }
 

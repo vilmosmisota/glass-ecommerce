@@ -114,10 +114,10 @@ export default function Result(): JSX.Element {
   console.log(data);
 
   return (
-    <Layout>
-      <main className="result-container">
-        {data ? <ShowResult /> : <LoaderIcon />}
-      </main>
-    </Layout>
+    // <Layout>
+    <main className="result-container">
+      {data ? <ShowResult /> : <LoaderIcon />}
+    </main>
+    // </Layout>
   );
 }

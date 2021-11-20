@@ -24,25 +24,25 @@ export default function Contributors({
     .sort((a, b) => a.fields.name.localeCompare(b.fields.name));
 
   return (
-    <Layout>
-      <main>
-        <section className="contributors-statment-container">
-          <h1>{content[0].fields.header}</h1>
-        </section>
-        <article className="photographers-container">
-          <h1 className="section-title">Featured photographers</h1>
-          <Photographers photographers={photographers} notFound={notFound} />
-        </article>
-        <article className="artists-container">
-          <div className="artists-section">
-            <h1 className="section-title">Contributing artists/surfers</h1>
-            <div className="artists-wrapper">
-              <Artists artists={artists} notFound={notFound} />
-            </div>
+    // <Layout>
+    <main>
+      <section className="contributors-statment-container">
+        <h1>{content[0].fields.header}</h1>
+      </section>
+      <article className="photographers-container">
+        <h1 className="section-title">Featured photographers</h1>
+        <Photographers photographers={photographers} notFound={notFound} />
+      </article>
+      <article className="artists-container">
+        <div className="artists-section">
+          <h1 className="section-title">Contributing artists/surfers</h1>
+          <div className="artists-wrapper">
+            <Artists artists={artists} notFound={notFound} />
           </div>
-        </article>
-      </main>
-    </Layout>
+        </div>
+      </article>
+    </main>
+    // </Layout>
   );
 }
 
