@@ -1,7 +1,9 @@
-@include media-large {
-  .contributer-wrapper {
-    .contributer-img-wrapper {
-      margin-top: 0;
+@include media-medium {
+  .contributer-container {
+    .contributer-wrapper {
+      .content-wrapper {
+        height: 420px;
+      }
     }
   }
 }

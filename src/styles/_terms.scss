@@ -1,0 +1,50 @@
+.terms-container {
+  width: $width;
+  border: $border;
+  margin: 0 auto 5rem auto;
+  max-width: 865px;
+  padding: 1.5rem;
+  @include flexCenter;
+  flex-direction: column;
+
+  h1 {
+    font-family: $secondary-font-bold;
+    font-size: $large-font-SS;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .main {
+    max-width: 90%;
+
+    h2 {
+      font-size: $medium-font-SS;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: $small-font-SS;
+      margin-bottom: 0.5rem;
+    }
+
+    div {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+@include media-large {
+  .terms-container {
+    h1 {
+      font-size: $large-font-LS;
+    }
+
+    h2 {
+      font-size: $medium-font-LS;
+    }
+
+    p {
+      font-size: $small-font-LS;
+    }
+  }
+}

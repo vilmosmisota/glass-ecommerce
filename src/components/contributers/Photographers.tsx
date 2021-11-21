@@ -3,6 +3,7 @@ import Image from "next/image";
 import getColor from "../../utils/getColor";
 import { useState } from "react";
 import { AiOutlineInstagram } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 export default function Photographers({
   photographers,
@@ -38,7 +39,7 @@ export default function Photographers({
               }[]
             ) => ({
               ...prev,
-              [id]: !prev[id as any],
+              [id as string]: !prev[id as any],
             })
           );
         };
@@ -59,29 +60,106 @@ export default function Photographers({
                   <span>{" " + secondName}</span>
                 </h1>
               </section>
-              <section className="contributer-img-wrapper">
-                <Image
-                  src={`https:${portfolioImage.fields.file.url}`}
-                  height={portfolioImage.fields.file.details.image.height}
-                  width={portfolioImage.fields.file.details.image.width}
-                  alt="book cover"
-                  className="portfolio-img"
-                  layout="responsive"
-                  onClick={onClick}
-                />
-              </section>
-              {/* <section
-                className="bio-container"
-              >
-                <div className="social-wrapper">
-                  <a href={instagram} target="_blank" rel="noopener noreferrer">
-                    <AiOutlineInstagram />
-                  </a>
+              <div className="content-wrapper">
+                <motion.section
+                  className="bio-container"
+                  initial={{
+                    opacity: 0,
+                    x: "-100%",
+                  }}
+                  animate={
+                    !isBio[id]
+                      ? {
+                          opacity: 0,
+                          x: "-100%",
+                          scale: 0,
+                          transition: { duration: 0.5 },
+                        }
+                      : {
+                          opacity: 1,
+                          x: 0,
+                          scale: 1,
+                          transition: { duration: 0.5 },
+                        }
+                  }
+                >
+                  <article className="bio-wrapper">
+                    <p>{bio}</p>
+                  </article>
+                  <div className="social-wrapper">
+                    <a
+                      href={instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Instagram
+                    </a>
+                  </div>
+                </motion.section>
+                <motion.section
+                  className="contributer-img-wrapper"
+                  animate={
+                    isBio[id]
+                      ? {
+                          opacity: 0,
+                          x: "100%",
+                          scale: 0,
+                          transition: { duration: 0.5 },
+                        }
+                      : {
+                          opacity: 1,
+                          x: 0,
+                          scale: 1,
+                          transition: { duration: 0.5 },
+                        }
+                  }
+                >
+                  <Image
+                    src={`https:${portfolioImage.fields.file.url}`}
+                    height={portfolioImage.fields.file.details.image.height}
+                    width={portfolioImage.fields.file.details.image.width}
+                    alt="book cover"
+                    className="portfolio-img"
+                    layout="responsive"
+                  />
+                </motion.section>
+              </div>
+              <section className="toggle-container">
+                <div className="toggle-wrapper" onClick={onClick}>
+                  <div className="img-icon">
+                    <motion.p
+                      animate={
+                        !isBio[id]
+                          ? { WebkitTextStrokeWidth: 0, color: "black" }
+                          : {
+                              WebkitTextStrokeWidth: "1px",
+                              color: "transparent",
+                            }
+                      }
+                    >
+                      Img
+                    </motion.p>
+                  </div>
+                  <div className="bio-icon">
+                    <motion.p
+                      animate={
+                        isBio[id]
+                          ? { WebkitTextStrokeWidth: 0, color: "black" }
+                          : {
+                              WebkitTextStrokeWidth: "1px",
+                              color: "transparent",
+                            }
+                      }
+                    >
+                      Bio
+                    </motion.p>
+                  </div>
+                  <motion.div
+                    className="hover"
+                    animate={isBio[id] ? { x: 70 } : { x: 0 }}
+                  ></motion.div>
                 </div>
-                <article className="bio-wrapper">
-                  <p>{bio}</p>
-                </article>
-              </section> */}
+              </section>
             </div>
           </article>
         );

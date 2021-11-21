@@ -8,6 +8,7 @@ import {
 } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { motion } from "framer-motion";
 
 export default function About({
   contents,
@@ -16,13 +17,33 @@ export default function About({
   const { quote, par1, par2, par3, par4, par5, par6, portrait } =
     contents[0].fields;
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
   return (
     // <Layout>
-    <main className="about-container">
-      <section className="quote-container">
+    <motion.main
+      className="about-container"
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
+      <motion.section variants={item} className="quote-container">
         <h1>{quote}</h1>
-      </section>
-      <div className="intro">
+      </motion.section>
+      <motion.div variants={item} className="intro">
         <picture className="portrait-container">
           <Image
             src={`https:${portrait.fields.file.url}`}
@@ -35,15 +56,15 @@ export default function About({
         <section className="intro-container">
           <p>{documentToReactComponents(par1)}</p>
         </section>
-      </div>
-      <section className="par-container">
+      </motion.div>
+      <motion.section variants={item} className="par-container">
         <p>{documentToReactComponents(par2)}</p>
         <p>{documentToReactComponents(par3)}</p>
         <p>{documentToReactComponents(par4)}</p>
         <p>{documentToReactComponents(par5)}</p>
         <p>{documentToReactComponents(par6)}</p>
-      </section>
-    </main>
+      </motion.section>
+    </motion.main>
     // </Layout>
   );
 }

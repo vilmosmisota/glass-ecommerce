@@ -25,6 +25,7 @@ export const Navbar: FC = () => {
           className="logo-container"
           whileHover={{ backgroundColor: "#e9e9e7" }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => setToggle(false)}
         >
           <Image src={logo} layout="responsive" alt="logo" className="logo" />
         </motion.section>

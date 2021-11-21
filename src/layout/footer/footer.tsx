@@ -9,6 +9,7 @@ import {
   FaCcStripe,
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import Link from "next/link";
 
 export default function Footer() {
   const year = () => new Date().getFullYear();
@@ -59,10 +60,16 @@ export default function Footer() {
           </article>
           <section className="footer-details-container">
             <ul>
-              <li>Terms & Conditions</li>
-              <li>Shipping & Returns</li>
+              <Link href="/terms" passHref>
+                <li>Terms & Conditions</li>
+              </Link>
+              <Link href="/" passHref>
+                <li>Shipping & Returns</li>
+              </Link>
               <li>Sustainability</li>
-              <li>Privacy policy</li>
+              <Link href="/privacy" passHref>
+                <li>Privacy policy</li>
+              </Link>
             </ul>
           </section>
         </div>
