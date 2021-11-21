@@ -105,12 +105,10 @@ button {
   padding: 0.2rem 1.5rem;
   cursor: pointer;
   background-color: unset;
-  border: none;
-  border-radius: 5px;
+  border: $border;
   font-weight: 600;
   font-size: $small-font-SS;
   transition: $btn-transition;
-  box-shadow: $box-shadow;
 }
 
 button:focus,

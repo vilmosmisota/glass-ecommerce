@@ -41,12 +41,7 @@ export default function Header({
 
         <div className="button-wrapper">
           <Link href="/shop" passHref>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Shop
-            </motion.button>
+            <motion.button whileTap={{ scale: 0.9 }}>Shop</motion.button>
           </Link>
         </div>
       </section>

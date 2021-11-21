@@ -79,8 +79,7 @@
     }
 
     .header-img-container {
-      width: 80%;
-      max-width: 300px;
+      width: 290px;
       text-align: center;
       margin: 0 auto;
     }
@@ -94,10 +93,11 @@
         font-family: $primary-font;
         font-weight: 600;
         font-size: $small-font-SS;
-
-        &:hover {
-          background-color: $orange;
-        }
+        box-shadow: none;
+        border-radius: 0;
+        border: $border;
+        width: 290px;
+        height: 40px;
       }
     }
   }
