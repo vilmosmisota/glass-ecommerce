@@ -40,7 +40,7 @@
       width: 100%;
       @include flexCenter;
       position: relative;
-      height: 350px;
+      min-height: 380px;
       overflow: hidden;
 
       section {
