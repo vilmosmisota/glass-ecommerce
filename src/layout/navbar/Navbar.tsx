@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logoBlack.png";
+import logo from "../../assets/images/logo.png";
 import React, { useState, FC } from "react";
 import Link from "next/link";
 import Image from "next/image";

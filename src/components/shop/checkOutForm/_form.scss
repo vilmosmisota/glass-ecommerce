@@ -23,7 +23,7 @@
   }
 
   option {
-    background-color: $blue;
+    background-color: $darkGray;
     color: $light;
   }
 
@@ -36,7 +36,6 @@
       background-color: transparent;
       border: $border;
       padding: 0.2rem 0.4rem;
-      color: $light;
     }
   }
 
@@ -45,7 +44,7 @@
     padding: 0.5rem;
     margin-top: 1.5rem;
     font-weight: bold;
-    color: $orange;
+    background-color: $orange;
     height: 40px;
   }
 }

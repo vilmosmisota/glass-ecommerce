@@ -2,6 +2,7 @@ import { IpropsContents } from "../../../interfaces/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import logo from "../../../assets/images/logoBlack.png";
 
 export default function Header({
   contents,
@@ -25,8 +26,11 @@ export default function Header({
       </section>
       <section className="image-section">
         <div className="book-title-container">
-          <h1>GLASS VO1</h1>
-          <h2>The North Sea</h2>
+          <figure className="logo-title">
+            <Image src={logo} layout="responsive" alt="logo" className="logo" />
+          </figure>
+
+          <h2>North Sea</h2>
         </div>
         <div className="header-img-container">
           <Image

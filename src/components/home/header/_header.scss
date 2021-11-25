@@ -6,8 +6,6 @@
   margin-bottom: $marginBottom-SS;
   flex-direction: column-reverse;
   border: $border;
-  background-color: $beige;
-  padding-top: 2rem;
 
   .statement-container {
     display: flex;
@@ -15,10 +13,12 @@
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     // text-transform: uppercase;
-    padding: 1.5rem 0.5rem 0rem 0.5rem;
     margin: 0 auto;
+    background-color: $lightGray;
+    // color: $light;
+    padding: 3rem 0.5rem;
 
     & h1 {
       padding-bottom: 2.5rem;
@@ -44,7 +44,7 @@
         text-align: center;
         font-family: $secondary-font-bold;
 
-        text-transform: uppercase;
+        text-transform: capitalize;
       }
     }
 
@@ -61,19 +61,20 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    padding: 3rem 0.5rem;
 
     .book-title-container {
       text-align: center;
       margin-bottom: 1rem;
 
-      h1 {
-        font-size: $veryLarge-font-SS;
-        font-family: $secondary-font-bold;
+      .logo-title {
+        width: 180px;
+        margin-bottom: 0.5rem;
       }
 
       h2 {
-        font-style: italic;
         font-size: $large-font-SS;
+        text-transform: uppercase;
         font-weight: 300;
       }
     }
@@ -88,16 +89,13 @@
       padding: 1.5rem 0;
 
       button {
-        background-color: $light;
-
-        font-family: $primary-font;
-        font-weight: 600;
         font-size: $small-font-SS;
         box-shadow: none;
         border-radius: 0;
         border: $border;
         width: 290px;
         height: 40px;
+        background-color: $beige;
       }
     }
   }

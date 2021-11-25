@@ -30,10 +30,10 @@
     }
     .nav-icons-wrapper {
       display: block;
-      width: 200px;
+      width: 150px;
       height: 60px;
       border: $border;
-      background-color: $orange;
+      // background-color: $orange;
       color: black;
       @include flexCenter;
 
@@ -48,7 +48,7 @@
           transition: $btn-transition;
 
           &:hover {
-            color: $light;
+            color: $orange;
           }
         }
       }

@@ -7,11 +7,10 @@
   margin: 1.2rem auto;
 
   .logo-container {
-    width: 200px;
+    width: 150px;
     padding: 0.5rem;
     text-align: center;
     border: $border;
-    background-color: $orange;
     cursor: pointer;
     transition: $btn-transition;
   }
@@ -35,9 +34,8 @@
     transition: all 0.2s ease-in;
     opacity: 0;
     pointer-events: none;
-    background-color: $orange;
-    color: black;
-
+    background-color: $darkGray;
+    color: $beige;
     .nav-lists {
       display: flex;
       flex-direction: column;
@@ -53,9 +51,10 @@
         font-size: 1.9rem;
         transition: $btn-transition;
         cursor: pointer;
+        font-family: $secondary-font-bold;
 
         &:hover {
-          color: $light;
+          color: $orange;
         }
       }
     }

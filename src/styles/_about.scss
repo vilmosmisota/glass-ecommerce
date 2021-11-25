@@ -34,10 +34,11 @@
 
   .par-container {
     margin: 1.5rem auto 0 auto;
-    max-width: 500px;
+    max-width: 550px;
     p {
       font-size: $small-font-SS;
       margin-bottom: 1.5rem;
+      padding: 0.5rem;
       max-width: 100%;
     }
   }
