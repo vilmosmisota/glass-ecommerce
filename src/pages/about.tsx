@@ -1,4 +1,3 @@
-import Layout from "../layout/Layout";
 import { Icontents, IpropsContents } from "../interfaces/interfaces";
 import {
   ContentfulClientApi,
