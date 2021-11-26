@@ -2,7 +2,6 @@ import { IpropsPhotographers } from "../../interfaces/interfaces";
 import Image from "next/image";
 import getColor from "../../utils/getColor";
 import { useState } from "react";
-import { AiOutlineInstagram } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 export default function Photographers({
@@ -65,13 +64,13 @@ export default function Photographers({
                   className="bio-container"
                   initial={{
                     opacity: 0,
-                    x: "-100%",
+                    x: "-150%",
                   }}
                   animate={
                     !isBio[id]
                       ? {
                           opacity: 0,
-                          x: "-100%",
+                          x: "-150%",
                           scale: 0,
                           transition: { duration: 0.5 },
                         }
@@ -102,7 +101,7 @@ export default function Photographers({
                     isBio[id]
                       ? {
                           opacity: 0,
-                          x: "100%",
+                          x: "150%",
                           scale: 0,
                           transition: { duration: 0.5 },
                         }
