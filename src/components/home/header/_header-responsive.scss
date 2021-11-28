@@ -7,18 +7,9 @@
     position: relative;
     overflow-y: hidden;
 
-    // &::after {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 50%;
-    //   width: 1px;
-    //   height: 90vh;
-    //   background-color: black;
-    //   content: "";
-    // }
-
     .statement-container {
       max-width: 50%;
+      border-right: 1px solid black;
 
       .statement1,
       .statement3 {

@@ -24,8 +24,8 @@
 
     .email-container {
       @include flexCenter;
-      background-color: $blue;
-      color: $beige;
+      background-color: $beige;
+      // color: $beige;
       max-width: 80%;
       width: 80vw;
       height: 60px;

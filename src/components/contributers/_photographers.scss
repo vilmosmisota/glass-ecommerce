@@ -43,10 +43,6 @@
       height: 420px;
       overflow: hidden;
 
-      // section {
-      //   margin: 0 1rem;
-      // }
-
       .contributer-img-wrapper {
         width: 100%;
         max-width: 600px;
@@ -63,6 +59,7 @@
 
         p {
           font-size: $small-font-SS;
+          text-align: justify;
         }
 
         .social-wrapper {
@@ -81,6 +78,7 @@
       .toggle-wrapper {
         width: 150px;
         height: 50px;
+        border-radius: 50px;
         border: $border;
         display: flex;
         align-items: center;
@@ -114,7 +112,7 @@
           width: 75px;
           height: 46px;
           border: $border;
-
+          border-radius: 50px;
           background-color: $light;
           opacity: 0.3;
           z-index: 1;

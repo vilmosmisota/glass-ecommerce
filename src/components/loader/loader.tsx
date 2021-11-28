@@ -18,7 +18,7 @@ export default function Loader({
   const container = {
     show: {
       transition: {
-        staggerChildren: 0.8,
+        staggerChildren: 0.5,
         delayChildren: 2,
       },
     },
@@ -37,7 +37,7 @@ export default function Loader({
       y: "-200%",
       transition: {
         ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1.6,
+        duration: 1.5,
       },
     },
     exit: {
@@ -72,7 +72,7 @@ export default function Loader({
         animate={{
           opacity: 0,
           transition: {
-            delay: 8.8,
+            delay: 6.7,
           },
         }}
       >

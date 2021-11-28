@@ -28,10 +28,17 @@
         width: 180px;
         margin-bottom: 0.5rem;
       }
+      h1 {
+        font-size: $large-font-SS;
+        font-family: $secondary-font-bold;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        color: black;
+      }
 
       h2 {
         font-size: $medium-font-LS;
-        text-transform: uppercase;
+
         font-weight: 300;
       }
     }
@@ -47,23 +54,24 @@
       font-size: $small-font-SS;
       margin-top: 1.5rem;
       max-width: 400px;
+      text-align: justify;
     }
   }
   .checkout-details-container {
-    background-color: $lightGray;
+    // background-color: $lightGray;
     width: 100%;
     border: $border;
     padding: 2rem 1rem;
     @include flexCenter;
     flex-direction: column;
 
-    h2 {
+    h1 {
       font-size: $large-font-SS;
-      font-weight: 600;
+      font-family: $secondary-font-bold;
       margin-bottom: 0.5rem;
       text-align: center;
       color: black;
-      text-transform: uppercase;
+      // text-transform: uppercase;
     }
     .details-container {
       @include flexCenter;
@@ -81,6 +89,7 @@
           margin: 0.5rem 0;
           list-style-type: disc;
           padding: 0;
+          font-style: 300;
         }
       }
     }

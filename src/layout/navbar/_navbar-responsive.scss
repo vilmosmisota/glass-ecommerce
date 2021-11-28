@@ -32,10 +32,12 @@
       display: block;
       width: 150px;
       height: 60px;
-      border: $border;
+      // border: $border;
       // background-color: $orange;
       color: black;
-      @include flexCenter;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
       .nav-icon {
         @include flexEven;

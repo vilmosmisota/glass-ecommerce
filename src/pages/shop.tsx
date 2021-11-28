@@ -64,10 +64,11 @@ export default function Shop({
     <main className="shop-page">
       <section className="product-container">
         <div className="title-container">
-          <figure className="logo-title">
+          {/* <figure className="logo-title">
             <Image src={logo} layout="responsive" alt="logo" className="logo" />
-          </figure>
-          <h2>The North Sea</h2>
+          </figure> */}
+          <h1>North Sea</h1>
+          <h2>Volume 1</h2>
         </div>
         <div className="img-container">
           <Image
@@ -85,13 +86,13 @@ export default function Shop({
       </section>
       <section className="checkout-details-container">
         <div className="details-container">
-          <h2>Product details</h2>
+          <h1>Launch Edition</h1>
           <ul>
             <ShowDetails />
           </ul>
         </div>
         <div className="checkout-container">
-          <h2>Checkout</h2>
+          <h1>Checkout</h1>
           <Form contents={contents} />
         </div>
       </section>

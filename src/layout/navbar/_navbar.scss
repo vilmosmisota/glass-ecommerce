@@ -5,12 +5,13 @@
   align-items: center;
   justify-content: space-between;
   margin: 1.2rem auto;
+  z-index: 1;
 
   .logo-container {
     width: 150px;
     padding: 0.5rem;
     text-align: center;
-    border: $border;
+    // border: $border;
     cursor: pointer;
     transition: $btn-transition;
   }
@@ -35,7 +36,7 @@
     opacity: 0;
     pointer-events: none;
     background-color: $darkGray;
-    color: $beige;
+    // color: $beige;
     .nav-lists {
       display: flex;
       flex-direction: column;
@@ -52,6 +53,8 @@
         transition: $btn-transition;
         cursor: pointer;
         font-family: $secondary-font-bold;
+        // text-transform: uppercase;
+        color: $beige;
 
         &:hover {
           color: $orange;

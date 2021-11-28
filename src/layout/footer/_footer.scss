@@ -5,8 +5,9 @@
   padding: 1.5rem 0;
   @include flexCenter;
   flex-direction: column;
-  color: $beige;
+  color: black;
   border-top: $border;
+  color: $beige;
 
   .footer-container {
     @include flexCenter;

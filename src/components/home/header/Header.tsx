@@ -26,11 +26,12 @@ export default function Header({
       </section>
       <section className="image-section">
         <div className="book-title-container">
-          <figure className="logo-title">
+          {/* <figure className="logo-title">
             <Image src={logo} layout="responsive" alt="logo" className="logo" />
-          </figure>
+          </figure> */}
 
-          <h2>North Sea</h2>
+          <h1>North Sea</h1>
+          <h2>Volume 1</h2>
         </div>
         <div className="header-img-container">
           <Image

@@ -16,7 +16,7 @@
     height: 100%;
     // text-transform: uppercase;
     margin: 0 auto;
-    background-color: $lightGray;
+    // background-color: $lightGray;
     // color: $light;
     padding: 3rem 0.5rem;
 
@@ -72,9 +72,14 @@
         margin-bottom: 0.5rem;
       }
 
+      h1 {
+        font-size: $veryLarge-font-SS;
+        font-family: $secondary-font-bold;
+      }
+
       h2 {
         font-size: $large-font-SS;
-        text-transform: uppercase;
+
         font-weight: 300;
       }
     }

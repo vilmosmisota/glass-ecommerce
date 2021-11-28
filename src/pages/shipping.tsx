@@ -32,7 +32,7 @@ export default function Sustainability() {
             <br />
             <b>Europe</b> - £6
             <br />
-            <b>Rest Of The World</b> - £3
+            <b>Rest Of The World</b> - £9
             <br />
           </p>
         </div>
