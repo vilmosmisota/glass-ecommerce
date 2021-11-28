@@ -19,7 +19,7 @@ export const Navbar: FC = () => {
     toggle === false ? "hamburger" : "hamburger open";
 
   return (
-    <nav className="nav-container">
+    <motion.nav className="nav-container">
       <Link href="/" passHref>
         <motion.section
           className="logo-container"
@@ -85,6 +85,6 @@ export const Navbar: FC = () => {
         <span></span>
         <span></span>
       </div>
-    </nav>
+    </motion.nav>
   );
 };

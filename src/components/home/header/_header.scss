@@ -96,6 +96,10 @@
         width: 290px;
         height: 40px;
         background-color: $beige;
+
+        &:hover {
+          background-color: $light;
+        }
       }
     }
   }

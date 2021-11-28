@@ -8,7 +8,8 @@ import {
   FaCcMastercard,
   FaCcStripe,
 } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiFillLock } from "react-icons/ai";
+
 import Link from "next/link";
 
 export default function Footer() {
@@ -63,10 +64,12 @@ export default function Footer() {
               <Link href="/terms" passHref>
                 <li>Terms & Conditions</li>
               </Link>
-              <Link href="/" passHref>
+              <Link href="/shipping" passHref>
                 <li>Shipping & Returns</li>
               </Link>
-              <li>Sustainability</li>
+              <Link href="/sustainability" passHref>
+                <li>Sustainability</li>
+              </Link>
               <Link href="/privacy" passHref>
                 <li>Privacy policy</li>
               </Link>
@@ -76,6 +79,13 @@ export default function Footer() {
         <div className="footer-logo-container">
           <section className="footer-logo-wrapper">
             <Image src={logo} layout="responsive" alt="logo" className="logo" />
+          </section>
+          <section className="secured">
+            <p>
+              <AiFillLock />
+            </p>
+            <p>Secured payments</p>
+            <p>Powered by Stripe</p>
           </section>
           <section className="footer-payment-logo-container">
             <ul>

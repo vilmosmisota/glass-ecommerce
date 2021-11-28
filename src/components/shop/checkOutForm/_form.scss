@@ -59,5 +59,8 @@
     width: 85vw;
     height: 40px;
     max-width: 400px;
+    &:hover {
+      background-color: transparent;
+    }
   }
 }

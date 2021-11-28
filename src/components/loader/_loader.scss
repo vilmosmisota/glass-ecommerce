@@ -1,0 +1,52 @@
+.loader-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+    @include flexCenter;
+    overflow: hidden;
+    background-color: $lightGray;
+
+    .img {
+      position: absolute;
+      width: 80%;
+      height: auto;
+    }
+
+    .a {
+      z-index: 8;
+    }
+    .b {
+      z-index: 7;
+    }
+    .c {
+      z-index: 6;
+    }
+    .d {
+      z-index: 5;
+    }
+    .e {
+      z-index: 4;
+    }
+    .f {
+      z-index: 3;
+    }
+    .g {
+      z-index: 2;
+    }
+    .opening {
+      z-index: 10;
+      background-color: $darkGray;
+      width: 100%;
+      height: 100%;
+      @include flexCenter;
+    }
+  }
+}

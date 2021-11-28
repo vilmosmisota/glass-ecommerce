@@ -36,12 +36,12 @@ export default function Result(): JSX.Element {
       <article>
         <h1>Payment successful</h1>
         <section className="message-container">
-          <h2>Thank you for your purchase, {name}.</h2>
-          <p>We hope that you will enjoy flipping through the photobook.</p>
+          <h2>Thank you for supporting contemporary surf culture!</h2>
           <p>
-            We will send you an email once the order has been processed. If you
-            have any quetions just email us at info@glassphotobook.shop
+            Your purchase helps respected creatives and emerging talent reflect
+            the diverse strands of surfing today.
           </p>
+          <p>We will send an email once the order has been processed.</p>
         </section>
         <section className="order-details-container">
           <h2>Order details</h2>
