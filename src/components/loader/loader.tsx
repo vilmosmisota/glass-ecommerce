@@ -76,11 +76,7 @@ export default function Loader({
           },
         }}
       >
-        <motion.div
-          className="opening"
-          variants={opening}
-          style={{ fontSize: "24px" }}
-        >
+        <motion.div className="opening" variants={opening}>
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString("Loading").start();

@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
               pageAnimate: { opacity: 1, transition: { duration: 1 } },
               pageExit: {
                 opacity: 0,
+                transition: { duration: 1 },
               },
             }}
           >

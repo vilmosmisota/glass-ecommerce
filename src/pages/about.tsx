@@ -32,12 +32,11 @@ export default function About({
   };
 
   return (
-    // <Layout>
     <motion.main
       className="about-container"
-      variants={container}
-      initial="hidden"
-      animate="show"
+      // variants={container}
+      // initial="hidden"
+      // animate="show"
     >
       <motion.section variants={item} className="quote-container">
         <h1>{quote}</h1>
@@ -64,7 +63,6 @@ export default function About({
         <p>{documentToReactComponents(par6)}</p>
       </motion.section>
     </motion.main>
-    // </Layout>
   );
 }
 
