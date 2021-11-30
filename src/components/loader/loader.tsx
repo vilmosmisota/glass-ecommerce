@@ -62,19 +62,19 @@ export default function Loader({
   return (
     <motion.article
       variants={container}
-      onAnimationComplete={() => setLoading(true)}
+      // onAnimationComplete={() => setLoading(true)}
       initial="hidden"
       animate="show"
       className="loader-container"
     >
       <motion.div
         className="inner"
-        animate={{
-          opacity: 0,
-          transition: {
-            delay: 6.7,
-          },
-        }}
+        // animate={{
+        //   opacity: 0,
+        //   transition: {
+        //     delay: 6.7,
+        //   },
+        // }}
       >
         <motion.div className="opening" variants={opening}>
           <Typewriter
