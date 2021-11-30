@@ -62,7 +62,7 @@ export default function Loader({
   return (
     <motion.article
       variants={container}
-      onAnimationComplete={() => setLoading(false)}
+      onAnimationComplete={() => setLoading(true)}
       initial="hidden"
       animate="show"
       className="loader-container"
