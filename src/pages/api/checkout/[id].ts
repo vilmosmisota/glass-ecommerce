@@ -20,7 +20,7 @@ export default async function checkout(
       });
 
     res.status(200).json(checkout_session);
-  } catch (err) {
+  } catch (err: any) {
     res.status(500).json({ statusCode: 500, message: err.message });
   }
 }

@@ -10,47 +10,34 @@
   .statement-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    // text-transform: uppercase;
     margin: 0 auto;
-    // background-color: $lightGray;
-    // color: $light;
-    padding: 3rem 0.5rem;
 
-    & h1 {
-      padding-bottom: 2.5rem;
-    }
+    padding: 3rem 0.5rem;
+    text-align: center;
 
     .statement1,
     .statement3 {
-      align-self: flex-start;
-      font-style: italic;
-
       h1 {
         width: 90%;
-        max-width: 500px;
+        max-width: 600px;
         margin: 0 auto;
         font-weight: 300;
         font-size: $large-font-SS;
+        font-style: italic;
       }
     }
 
     .statement2 {
       h1 {
         font-size: $veryLarge-font-SS;
-        text-align: center;
-        font-family: $secondary-font-bold;
-
-        text-transform: capitalize;
+        // text-align: center;
+        text-transform: uppercase;
+        padding: 2.5rem 0;
       }
-    }
-
-    .statement3 {
-      align-self: flex-end;
-      text-align: right;
     }
   }
 
@@ -66,21 +53,17 @@
     .book-title-container {
       text-align: center;
       margin-bottom: 1rem;
+      text-align: center;
 
       .logo-title {
-        width: 180px;
-        margin-bottom: 0.5rem;
+        max-width: 70px;
+        margin: 0.5rem auto;
       }
 
       h1 {
         font-size: $veryLarge-font-SS;
-        font-family: $secondary-font-bold;
-      }
-
-      h2 {
-        font-size: $large-font-SS;
-
-        font-weight: 300;
+        text-transform: uppercase;
+        font-weight: 600;
       }
     }
 

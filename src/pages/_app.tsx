@@ -4,10 +4,22 @@ import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Layout from "../layout/Layout";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/dist/client/router";
 import Loader from "../components/loader/loader";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [loading, setLoading] = useState<boolean>(true);
+  const [animate, setAnimate] = useState<boolean>(true);
+  const rout = useRouter();
+
+  useEffect(() => {
+    if (rout.asPath === "/" && loading === true) {
+      setAnimate(true);
+    } else {
+      setAnimate(false);
+      setLoading(false);
+    }
+  }, [rout.asPath, loading]);
 
   const App = () => {
     return (
@@ -34,6 +46,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     );
   };
 
-  return <>{loading ? <Loader setLoading={setLoading} /> : <App />}</>;
+  return <>{animate ? <Loader setLoading={setLoading} /> : <App />}</>;
 }
 export default MyApp;

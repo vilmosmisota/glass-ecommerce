@@ -117,7 +117,7 @@ export default function Photographers({
                     src={`https:${portfolioImage.fields.file.url}`}
                     height={portfolioImage.fields.file.details.image.height}
                     width={portfolioImage.fields.file.details.image.width}
-                    alt="book cover"
+                    alt="contributors portfolio image"
                     className="portfolio-img"
                     layout="responsive"
                   />

@@ -7,7 +7,7 @@ import img4 from "../../assets/images/for animations/4.jpg";
 import img5 from "../../assets/images/for animations/5.jpg";
 import img6 from "../../assets/images/for animations/6.jpg";
 import img7 from "../../assets/images/for animations/7.jpg";
-import logo from "../../assets/images/logoBlack.png";
+import logo from "../../assets/images/logoBlack.svg";
 import Typewriter from "typewriter-effect";
 
 export default function Loader({
@@ -62,19 +62,19 @@ export default function Loader({
   return (
     <motion.article
       variants={container}
-      // onAnimationComplete={() => setLoading(true)}
+      onAnimationComplete={() => setLoading(false)}
       initial="hidden"
       animate="show"
       className="loader-container"
     >
       <motion.div
         className="inner"
-        // animate={{
-        //   opacity: 0,
-        //   transition: {
-        //     delay: 6.7,
-        //   },
-        // }}
+        animate={{
+          opacity: 0,
+          transition: {
+            delay: 6.7,
+          },
+        }}
       >
         <motion.div className="opening" variants={opening}>
           <Typewriter

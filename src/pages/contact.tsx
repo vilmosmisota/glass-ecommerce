@@ -1,14 +1,5 @@
-import ContactForm from "../components/contactForm/contactForm";
-import Layout from "../layout/Layout";
-import { FaEnvelope } from "react-icons/fa";
-
 export default function Contact(): JSX.Element {
   return (
-    // <Layout>
-    // <>
-    //   <ContactForm />
-    // </>
-    // </Layout>
     <article className="contact-page-container">
       <h1>Contact Us</h1>
       <section className="contact-main">

@@ -2,6 +2,7 @@
   width: 100%;
   @include flexCenter;
   flex-direction: column;
+  position: relative;
 
   label {
     font-size: $small-font-SS;
@@ -22,5 +23,10 @@
     font-size: $medium-font-LS;
     color: $beige;
     margin-top: 0.6rem;
+  }
+
+  .message {
+    position: absolute;
+    bottom: -50px;
   }
 }

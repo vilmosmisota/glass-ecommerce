@@ -1,9 +1,8 @@
 import { Icontents, IpropsContents } from "../interfaces/interfaces";
 import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
-import Layout from "../layout/Layout";
 import Form from "../components/shop/checkOutForm/form";
 import Image from "next/image";
-import logo from "../assets/images/logoBlack.png";
+import logo from "../assets/images/VO1.svg";
 
 export async function getStaticProps(): Promise<Icontents> {
   const client: ContentfulClientApi = createClient({
@@ -64,11 +63,10 @@ export default function Shop({
     <main className="shop-page">
       <section className="product-container">
         <div className="title-container">
-          {/* <figure className="logo-title">
-            <Image src={logo} layout="responsive" alt="logo" className="logo" />
-          </figure> */}
           <h1>North Sea</h1>
-          <h2>Volume 1</h2>
+          <figure className="logo-title">
+            <Image src={logo} layout="responsive" alt="logo" className="logo" />
+          </figure>
         </div>
         <div className="img-container">
           <Image

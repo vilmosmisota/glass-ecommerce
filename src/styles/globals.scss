@@ -49,6 +49,13 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family: arsenal;
+  src: url("../../public/fonts/Arsenal.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
 body {
   font-family: $primary-font;
   background-image: linear-gradient(

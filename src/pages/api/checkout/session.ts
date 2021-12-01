@@ -27,16 +27,16 @@ export default async function checkout(
             price_data: {
               currency: "gbp",
               unit_amount: total * 100,
-              product: "prod_K5nFvibJVjeMzF",
+              product: "prod_KhQAOHQSZWkJwk",
             },
           },
         ],
         mode: "payment",
         success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${req.headers.origin}/`,
+        cancel_url: `${req.headers.origin}/shop`,
       });
       res.status(200).json({ sessionId: session.id });
-    } catch (err) {
+    } catch (err: any) {
       res.status(err.statusCode || 500).json(err.message);
     }
   } else {

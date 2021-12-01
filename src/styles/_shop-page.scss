@@ -11,7 +11,6 @@
   }
 
   .product-container {
-    // background-color: $lightGray;
     width: 100%;
     border: $border;
     padding: 2rem 1rem;
@@ -21,25 +20,16 @@
     .title-container {
       text-align: center;
       margin-bottom: 1rem;
-      @include flexCenter;
-      flex-direction: column;
 
       .logo-title {
-        width: 180px;
-        margin-bottom: 0.5rem;
+        max-width: 70px;
+        margin: 0.5rem auto;
       }
+
       h1 {
-        font-size: $large-font-SS;
-        font-family: $secondary-font-bold;
-        margin-bottom: 0.5rem;
-        text-align: center;
-        color: black;
-      }
-
-      h2 {
-        font-size: $medium-font-LS;
-
-        font-weight: 300;
+        font-size: $veryLarge-font-SS;
+        text-transform: uppercase;
+        font-weight: 600;
       }
     }
 

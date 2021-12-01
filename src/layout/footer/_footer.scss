@@ -76,6 +76,7 @@
       align-items: center;
       justify-content: space-between;
       flex-direction: row;
+      flex-wrap: wrap;
       margin-top: 1.5rem;
       padding: 0 1rem;
 
@@ -97,9 +98,10 @@
       .footer-payment-logo-container {
         ul {
           @include flexCenter;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
           padding: 0;
           margin: 0;
+          width: max-content;
 
           li {
             font-size: 50px;

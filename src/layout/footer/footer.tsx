@@ -1,5 +1,5 @@
 import SignUpForm from "../../components/signUpForm/signUpForm";
-import logo from "../../assets/images/logoBlack.png";
+import logo from "../../assets/images/logoBlack.svg";
 import Image from "next/image";
 import {
   FaCcVisa,
@@ -9,6 +9,7 @@ import {
   FaCcStripe,
 } from "react-icons/fa";
 import { AiFillInstagram, AiFillLock } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
 
@@ -34,9 +35,14 @@ export default function Footer() {
                 <p>info@glassphotobook.shop</p>
               </div>
               <div>
-                <figure>
-                  <FaEnvelope />
-                </figure>
+                <motion.figure
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <a href="mailto:info@glassphotobook.shop">
+                    <FaEnvelope />
+                  </a>
+                </motion.figure>
               </div>
             </section>
             <section>
@@ -47,7 +53,10 @@ export default function Footer() {
                 <p>Instagram</p>
               </div>
               <div>
-                <figure>
+                <motion.figure
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <a
                     href="https://www.instagram.com/glassphotobook/"
                     target="_blank"
@@ -55,7 +64,7 @@ export default function Footer() {
                   >
                     <AiFillInstagram />
                   </a>
-                </figure>
+                </motion.figure>
               </div>
             </section>
           </article>
