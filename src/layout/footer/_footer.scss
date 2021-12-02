@@ -74,19 +74,22 @@
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 1.5rem;
-      padding: 0 1rem;
+      padding: 2rem 1rem;
+      border-bottom: $border;
+      border-right: $border;
+      border-left: $border;
 
       .footer-logo-wrapper {
-        width: 180px;
+        width: 150px;
       }
       .secured {
         padding: 0.5rem;
         text-align: center;
         color: black;
+        display: none;
         p {
           margin: 0.5rem 0;
           font-size: $small-font-SS;
@@ -116,7 +119,8 @@
     .copyright-container {
       width: 100%;
       margin-top: 3rem;
-      padding: 0 1rem;
+      padding: 2rem 1rem;
+
       ul {
         display: flex;
         align-items: center;

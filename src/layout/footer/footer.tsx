@@ -86,15 +86,15 @@ export default function Footer() {
           </section>
         </div>
         <div className="footer-logo-container">
-          <section className="footer-logo-wrapper">
-            <Image src={logo} layout="responsive" alt="logo" className="logo" />
-          </section>
           <section className="secured">
             <p>
               <AiFillLock />
             </p>
             <p>Secured payments</p>
             <p>Powered by Stripe</p>
+          </section>
+          <section className="footer-logo-wrapper">
+            <Image src={logo} layout="responsive" alt="logo" className="logo" />
           </section>
           <section className="footer-payment-logo-container">
             <ul>

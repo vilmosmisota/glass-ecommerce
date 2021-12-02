@@ -52,14 +52,14 @@
 
       .bio-container {
         width: 80%;
-        max-width: 600px;
+        max-width: 500px;
         z-index: 3;
         position: absolute;
         top: 10%;
 
         p {
           font-size: $small-font-SS;
-          text-align: justify;
+          text-align: left;
         }
 
         .social-wrapper {

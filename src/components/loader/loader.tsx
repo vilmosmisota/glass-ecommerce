@@ -84,25 +84,60 @@ export default function Loader({
           />
         </motion.div>
         <motion.div variants={item} className="img a">
-          <Image src={img1} layout="responsive" alt="loader image" />
+          <Image
+            src={img1}
+            quality={"45"}
+            layout="responsive"
+            alt="loader image"
+          />
         </motion.div>
         <motion.div variants={item} className="img b">
-          <Image src={img2} layout="responsive" alt="loader image" />
+          <Image
+            src={img2}
+            quality={"45"}
+            layout="responsive"
+            alt="loader image"
+          />
         </motion.div>
         <motion.div variants={item} className="img c">
-          <Image src={img3} layout="responsive" alt="loader image" />
+          <Image
+            src={img3}
+            quality={"45"}
+            layout="responsive"
+            alt="loader image"
+          />
         </motion.div>
         <motion.div variants={item} className="img d">
-          <Image src={img4} layout="responsive" alt="loader image" />
+          <Image
+            src={img4}
+            quality={"45"}
+            layout="responsive"
+            alt="loader image"
+          />
         </motion.div>
         <motion.div variants={item} className="img e">
-          <Image src={img5} layout="responsive" alt="loader image" />
+          <Image
+            src={img5}
+            quality={"45"}
+            layout="responsive"
+            alt="loader image"
+          />
         </motion.div>
         <motion.div variants={item} className="img f">
-          <Image src={img6} layout="responsive" alt="loader image" />
+          <Image
+            src={img6}
+            quality={"45"}
+            layout="responsive"
+            alt="loader image"
+          />
         </motion.div>
         <motion.div variants={item} className="img g">
-          <Image src={img7} layout="responsive" alt="loader image" />
+          <Image
+            src={img7}
+            quality={"45"}
+            layout="responsive"
+            alt="loader image"
+          />
         </motion.div>
         <motion.div className="img glass">
           <Image src={logo} layout="responsive" alt="loader image" />

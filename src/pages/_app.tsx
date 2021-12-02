@@ -6,6 +6,7 @@ import Layout from "../layout/Layout";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/dist/client/router";
 import Loader from "../components/loader/loader";
+import HeadTag from "../components/headTag/HeadTag";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [loading, setLoading] = useState<boolean>(true);
@@ -46,6 +47,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     );
   };
 
-  return <>{animate ? <Loader setLoading={setLoading} /> : <App />}</>;
+  return (
+    <>
+      <HeadTag />
+      {animate ? <Loader setLoading={setLoading} /> : <App />}
+    </>
+  );
 }
 export default MyApp;
