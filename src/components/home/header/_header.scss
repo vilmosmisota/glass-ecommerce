@@ -27,7 +27,6 @@
         margin: 0 auto;
         font-weight: 300;
         font-size: $large-font-SS;
-        font-style: italic;
       }
     }
 
@@ -35,8 +34,10 @@
       h1 {
         font-size: $veryLarge-font-SS;
         // text-align: center;
-        text-transform: uppercase;
+
         padding: 2.5rem 0;
+        font-family: $secondary-font-bold;
+        text-transform: capitalize;
       }
     }
   }

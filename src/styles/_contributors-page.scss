@@ -8,7 +8,6 @@
 
     font-size: $large-font-SS;
     font-weight: 300;
-    font-style: italic;
   }
 }
 
@@ -17,22 +16,18 @@
     text-align: center;
     font-family: $secondary-font-bold;
     font-size: $veryLarge-font-SS;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px black;
     padding: 0;
     margin-bottom: 1.5rem;
   }
 }
 
 .artists-container {
+  margin: 60px auto;
+
   .section-title {
     text-align: center;
     font-family: $secondary-font-bold;
     font-size: $veryLarge-font-SS;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px black;
     padding: 0;
     margin-bottom: 1.5rem;
   }
@@ -45,7 +40,6 @@
     max-height: 1024px;
     padding: 2rem 0;
     margin: 0 auto;
-    background-color: $orange;
 
     .artists-wrapper {
       width: $width;

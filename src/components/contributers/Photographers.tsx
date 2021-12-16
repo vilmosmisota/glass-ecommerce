@@ -50,9 +50,20 @@ export default function Photographers({
           <article
             key={name}
             className="contributer-container"
-            style={{ backgroundColor: getColor(name) }}
+            // style={{
+            //   background: `linear-gradient(360deg, ${getColor(
+            //     name
+            //   )} -150.33%, rgba(138, 134, 134, 0) 90.37%)`,
+            // }}
           >
-            <div className="contributer-wrapper">
+            <div
+              className="contributer-wrapper"
+              style={{
+                background: `linear-gradient(360deg, ${getColor(
+                  name
+                )} -150.33%, rgba(138, 134, 134, 0) 90.37%)`,
+              }}
+            >
               <section className="contributer-name-wrapper" onClick={onClick}>
                 <h1>
                   <span className="first-name">{firstName}</span>

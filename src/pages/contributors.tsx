@@ -30,12 +30,12 @@ export default function Contributors({
         <h1>{content[0].fields.header}</h1>
       </section>
       <article className="photographers-container">
-        <h1 className="section-title">Featured photographers</h1>
+        <h1 className="section-title">Featured Photographers</h1>
         <Photographers photographers={photographers} notFound={notFound} />
       </article>
       <article className="artists-container">
         <div className="artists-section">
-          <h1 className="section-title">Contributing artists/surfers</h1>
+          <h1 className="section-title">Contributing Artists/Surfers</h1>
           <div className="artists-wrapper">
             <Artists artists={artists} notFound={notFound} />
           </div>

@@ -12,6 +12,7 @@ export default function HomeBody({
     quote,
     bodyImg1,
     bodyImg2,
+    bodyImg3,
     bodyStatement1,
     bodyStatement2,
     bodyStatement3,
@@ -21,17 +22,6 @@ export default function HomeBody({
 
   return (
     <main className="homeBody-container">
-      <article className="video-wrapper">
-        <iframe
-          src="https://player.vimeo.com/video/555321948?title=0&byline=0&portrait=0"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </article>
-      <article className="quote-container">
-        <h1>{quote}</h1>
-      </article>
       <article className="body-statement">
         <section className="statement-container">
           <div>
@@ -66,8 +56,25 @@ export default function HomeBody({
       </article>
       <article className="last-statement">
         <div>
-          <h2>{bodyStatement3}</h2>
+          <h3>{bodyStatement3}</h3>
         </div>
+      </article>
+      <article className="body-statement">
+        <Image
+          src={`https:${bodyImg3.fields.file.url}`}
+          height={bodyImg3.fields.file.details.image.height}
+          width={bodyImg3.fields.file.details.image.width}
+          alt="book cover"
+          layout="responsive"
+        />
+      </article>
+      <article className="video-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/648647757?title=0&byline=0&portrait=0"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </article>
     </main>
   );

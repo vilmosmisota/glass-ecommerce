@@ -5,19 +5,18 @@ export default function Sustainability() {
       <section className="main">
         <div>
           <p>
-            As surfers with waves to ride and stories to tell, we are inspired
-            to create a special platform for our surfing culture.
-            <br />
-            However, everything we produce or consume impacts on the environment
-            and the truth is, the least impactful way way to make book is to
-            just not make book at all.
+            Everything we produce or consume impacts on the environment and the
+            truth is, the least impactful way to make book is to just not make
+            book at all.
           </p>
           <p>
-            So throughout the entire production process, we have been conscious
-            how best to deliver GLASS in a way that is as kind as possible to
-            our planet. For us, this means production is fully FSC® certified
-            and carbon-neutral, simply put, we pay more to use paper from a
-            forest that is managed carefully and offset emissions.
+            However, as surfers with waves to ride and stories to tell, we are
+            inspired to create a lasting and meaningful platform to reflect our
+            surfing culture. So, throughout the production process, we have been
+            conscious how best to deliver GLASS in a way that is as kind as
+            possible to our planet. This means all the paper we use to produce
+            and distribute the book is from renewable sources. Simply put, we
+            pay more to use paper from a forest that is managed carefully.
           </p>
           <p>
             Also, the crowdfunding campaign has allowed us to gauge demand for

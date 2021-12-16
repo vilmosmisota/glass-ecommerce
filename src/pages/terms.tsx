@@ -1,7 +1,7 @@
 export default function Terms() {
   return (
     <article className="terms-container">
-      <h1>Terms & Contitions</h1>
+      <h1>Terms & Conditions</h1>
       <section className="main">
         <div>
           <h2>Ordering</h2>
