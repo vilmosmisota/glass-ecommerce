@@ -93,3 +93,53 @@
     }
   }
 }
+
+@include media-large {
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 90vh;
+    position: relative;
+    overflow-y: hidden;
+
+    .statement-container {
+      max-width: 50%;
+      border-right: 1px solid black;
+
+      .statement1,
+      .statement3 {
+        h1 {
+          font-size: $large-font-LS;
+        }
+      }
+
+      .statement2 {
+        h1 {
+          font-size: $veryLarge-font-LS;
+        }
+      }
+    }
+
+    .image-section {
+      max-width: 50%;
+      height: fit-content;
+
+      .book-title-container {
+        h1 {
+          font-size: $veryLarge-font-LS;
+        }
+
+        h2 {
+          font-size: $medium-font-LS;
+        }
+      }
+
+      .button-wrapper {
+        button {
+          font-size: $small-font-LS;
+        }
+      }
+    }
+  }
+}

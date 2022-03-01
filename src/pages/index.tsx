@@ -1,47 +1,37 @@
-import Layout from "../layout/Layout";
-import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
-import { Icontents, IpropsContents } from "../interfaces/interfaces";
-import Header from "../components/home/header/Header";
-import HomeBody from "../components/home/body/homeBody";
+import { getHomeData } from "../libs/data";
+import { HomeContent, HomeProps } from "../types/homeTypes";
+import HomeHeader from "../screens/home/HomeHeader";
+import HomeMain from "../screens/home/HomeMain ";
+import NotFound from "./_error";
 
-export async function getStaticProps(): Promise<Icontents> {
-  const client: ContentfulClientApi = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
-  });
+export default function Home(props: HomeContent) {
+  if (typeof props.data === "undefined") {
+    return <NotFound />;
+  }
 
-  try {
-    const res: EntryCollection<unknown> = await client.getEntries({
-      content_type: "homePage",
-    });
+  return (
+    <>
+      <HomeHeader {...props.data.header} />
+      <HomeMain {...props.data.main} />
+    </>
+  );
+}
 
+export async function getStaticProps(): Promise<HomeProps> {
+  const { data, isError } = await getHomeData();
+
+  if (isError) {
     return {
+      notFound: true,
       props: {
-        contents: res.items,
-        notFound: false,
-      },
-    };
-  } catch (err) {
-    console.log(err);
-    return {
-      props: {
-        contents: null,
-        notFound: true,
+        data: undefined,
       },
     };
   }
-}
 
-export default function Home({
-  contents,
-  notFound,
-}: IpropsContents): JSX.Element {
-  return (
-    // <Layout>
-    <>
-      <Header contents={contents} notFound={notFound} />
-      <HomeBody contents={contents} notFound={notFound} />
-    </>
-    // </Layout>
-  );
+  return {
+    props: {
+      data,
+    },
+  };
 }

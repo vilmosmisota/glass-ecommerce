@@ -1,0 +1,27 @@
+@import "config";
+@import "../layout/navbar/navbar";
+@import "../layout/navbar/navbar-responsive";
+@import "../layout/footer/footer";
+@import "../layout/footer/footer-responsive";
+
+// Screens
+@import "./screens/home/header.scss";
+
+@import "../components/home/body/homeBody";
+@import "../styles/about";
+@import "../styles/contributors-page";
+@import "../styles/contributors-page-responsive";
+@import "../components/contributers/photographers";
+@import "../components/contributers/photographers-responsive";
+@import "../components/contributers/artists/artists";
+@import "../components/contributers/artists/artists-responsive";
+@import "../components/signUpForm/signUpform";
+@import "../components/contactForm/contactForm";
+@import "../styles/shop-page";
+@import "../styles/shop-page-responsive";
+@import "../components/shop/checkOutForm/form";
+@import "../styles/result";
+@import "../styles/contact";
+@import "../components/loaderIcon/loaderIcon";
+@import "../styles/terms";
+@import "../components/loader/loader";
