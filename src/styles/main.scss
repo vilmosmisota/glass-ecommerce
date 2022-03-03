@@ -5,9 +5,9 @@
 @import "../layout/footer/footer-responsive";
 
 // Screens
-@import "./screens/home/header.scss";
+@import "./screens/home/homeHeader";
+@import "./screens/home/homeMain";
 
-@import "../components/home/body/homeBody";
 @import "../styles/about";
 @import "../styles/contributors-page";
 @import "../styles/contributors-page-responsive";

@@ -2,11 +2,10 @@ import { getHomeData } from "../libs/data";
 import { HomeContent, HomeProps } from "../types/homeTypes";
 import HomeHeader from "../screens/home/HomeHeader";
 import HomeMain from "../screens/home/HomeMain ";
-import NotFound from "./_error";
 
 export default function Home(props: HomeContent) {
   if (typeof props.data === "undefined") {
-    return <NotFound />;
+    return <h1>Oops, Something went wrong</h1>;
   }
 
   return (
