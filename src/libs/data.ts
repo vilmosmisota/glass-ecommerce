@@ -1,18 +1,35 @@
 import { CleanedImage } from "../types/commonTypes";
 import { HomeContent } from "../types/homeTypes";
+import { cleaningImgData } from "../utils/api-helper";
+import { handleAsync } from "../utils/handleAsync";
 import { client } from "./client";
-import { HomePage, Image } from "./models";
+import { HomePage, Image, LoaderImages } from "./models";
 
-export const handleAsync = async <T>(
-  promise: Promise<T>,
-  defaultError: any = "rejected"
-): Promise<T[] | [T, any]> => {
-  try {
-    const data = await promise;
-    return [data, undefined];
-  } catch (error) {
-    return await Promise.resolve([undefined, error || defaultError]);
+export const getLoaderImages = async () => {
+  const [data, error] = await handleAsync(
+    client.getEntries<LoaderImages>({
+      content_type: "loadingImages",
+    })
+  );
+
+  if (error) {
+    console.warn(error);
+    return {
+      isError: true,
+      data: undefined,
+    };
   }
+
+  const images = data.items[0].fields;
+  const cleanedImages = images.loadingImages.map((img) => {
+    const result = cleaningImgData(img);
+    return result;
+  });
+
+  return {
+    isError: false,
+    data: cleanedImages,
+  };
 };
 
 export const getHomeData = async (): Promise<HomeContent> => {
@@ -43,18 +60,6 @@ export const getHomeData = async (): Promise<HomeContent> => {
     bodyImg2,
     bodyImg3,
   } = data.items[0].fields;
-
-  function cleaningImgData(img: Image): CleanedImage {
-    const title = img.fields.title;
-    const url = img.fields.file.url;
-    const { width, height } = img.fields.file.details.image;
-    return {
-      url,
-      title,
-      width,
-      height,
-    };
-  }
 
   const cover = cleaningImgData(bookImg);
   const imgOne = cleaningImgData(bodyImg1);

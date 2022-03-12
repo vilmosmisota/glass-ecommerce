@@ -1,3 +1,6 @@
+import { Image } from "../libs/models";
+import { CleanedImage } from "../types/commonTypes";
+
 export async function fetchGetJSON(url: string) {
   try {
     const data = await fetch(url).then((res) => res.json());
@@ -25,4 +28,16 @@ export async function fetchPostJSON(url: string, data?: {}) {
   } catch (err) {
     throw new Error(err.message);
   }
+}
+
+export function cleaningImgData(img: Image): CleanedImage {
+  const title = img.fields.title;
+  const url = img.fields.file.url;
+  const { width, height } = img.fields.file.details.image;
+  return {
+    url,
+    title,
+    width,
+    height,
+  };
 }

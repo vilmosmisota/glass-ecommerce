@@ -5,22 +5,26 @@ import { motion } from "framer-motion";
 import Layout from "../layout/Layout";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/dist/client/router";
-import Loader from "../components/loader/loader";
 import HeadTag from "../components/headTag/HeadTag";
+import LoaderAnimations from "../screens/loader/loaderAnimations";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [loading, setLoading] = useState<boolean>(true);
   const [animate, setAnimate] = useState<boolean>(true);
-  const rout = useRouter();
+  const route = useRouter();
 
   useEffect(() => {
-    if (rout.asPath === "/" && loading === true) {
+    if (route.asPath === "/" && loading === true) {
       setAnimate(true);
     } else {
       setAnimate(false);
       setLoading(false);
     }
-  }, [rout.asPath, loading]);
+  }, [route.asPath, loading]);
+
+  function handleChange() {
+    setLoading(false);
+  }
 
   const App = () => {
     return (
@@ -50,7 +54,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <HeadTag />
-      {animate ? <Loader setLoading={setLoading} /> : <App />}
+      {animate ? <LoaderAnimations handleChange={handleChange} /> : <App />}
     </>
   );
 }

@@ -72,3 +72,9 @@ $veryLarge-font-LS: 2.5rem;
     @content;
   }
 }
+
+@mixin media-verysmall {
+  @media screen and (max-width: 325px) {
+    @content;
+  }
+}

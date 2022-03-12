@@ -7,6 +7,7 @@
 // Screens
 @import "./screens/home/homeHeader";
 @import "./screens/home/homeMain";
+@import "./screens/loader/loader";
 
 @import "../styles/about";
 @import "../styles/contributors-page";
@@ -24,4 +25,3 @@
 @import "../styles/contact";
 @import "../components/loaderIcon/loaderIcon";
 @import "../styles/terms";
-@import "../components/loader/loader";

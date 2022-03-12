@@ -26,3 +26,7 @@ export interface Image {
     };
   };
 }
+
+export interface LoaderImages {
+  loadingImages: Image[];
+}
