@@ -24,7 +24,6 @@ export default function Contributors({
     .sort((a, b) => a.fields.name.localeCompare(b.fields.name));
 
   return (
-    // <Layout>
     <main>
       <section className="contributors-statment-container">
         <h1>{content[0].fields.header}</h1>
@@ -42,7 +41,6 @@ export default function Contributors({
         </div>
       </article>
     </main>
-    // </Layout>
   );
 }
 
