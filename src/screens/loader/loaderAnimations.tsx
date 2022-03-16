@@ -73,6 +73,19 @@ export default function LoaderAnimations({ handleChange }: Props) {
     },
   };
 
+  const closing = {
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        delay: 2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+    },
+  };
+
   return (
     <div className="loader-container">
       {error && (
@@ -128,7 +141,12 @@ export default function LoaderAnimations({ handleChange }: Props) {
               />
             </motion.div>
           ))}
-          <motion.div className="img glass">
+          <motion.div
+            className="img glass"
+            variants={closing}
+            initial="hidden"
+            animate="show"
+          >
             <Image src={logo} layout="responsive" alt="loader image" />
           </motion.div>
         </motion.div>

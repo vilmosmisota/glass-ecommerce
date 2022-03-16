@@ -56,13 +56,30 @@ export default function Photographers({
             //   )} -150.33%, rgba(138, 134, 134, 0) 90.37%)`,
             // }}
           >
-            <div
+            <motion.div
               className="contributer-wrapper"
-              style={{
+              // style={{
+              //   background: `linear-gradient(360deg, ${getColor(
+              //     name
+              //   )} -350.33%, rgba(138, 134, 134, 0) 90.37%)`,
+              // }}
+              initial={{
                 background: `linear-gradient(360deg, ${getColor(
                   name
-                )} -150.33%, rgba(138, 134, 134, 0) 90.37%)`,
+                )} -150.33%, rgba(138, 134, 134, 0) 140.37%)`,
+                opacity: 1,
               }}
+              whileInView={{
+                transition: {
+                  delay: 0.3,
+                  ease: [0.17, 0.67, 0.83, 0.67],
+                  duration: 0.6,
+                },
+                background: `linear-gradient(360deg, ${getColor(
+                  name
+                )} -150.33%, rgba(138, 134, 134, 0) 60.37%)`,
+              }}
+              viewport={{ once: true }}
             >
               <section className="contributer-name-wrapper" onClick={onClick}>
                 <h1>
@@ -170,7 +187,7 @@ export default function Photographers({
                   ></motion.div>
                 </div>
               </section>
-            </div>
+            </motion.div>
           </article>
         );
       })}
