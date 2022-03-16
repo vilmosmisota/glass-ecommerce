@@ -3,6 +3,7 @@ import Image from "next/image";
 import getColor from "../../utils/getColor";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { fadeIn } from "../../animations/commonAs";
 
 export default function Photographers({
   photographers,
@@ -87,7 +88,13 @@ export default function Photographers({
                   <span>{" " + secondName}</span>
                 </h1>
               </section>
-              <div className="content-wrapper">
+              <motion.div
+                className="content-wrapper"
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
                 <motion.section
                   className="bio-container"
                   initial={{
@@ -150,7 +157,7 @@ export default function Photographers({
                     layout="responsive"
                   />
                 </motion.section>
-              </div>
+              </motion.div>
               <section className="toggle-container">
                 <div className="toggle-wrapper" onClick={onClick}>
                   <div className="img-icon">
