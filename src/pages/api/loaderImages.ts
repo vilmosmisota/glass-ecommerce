@@ -23,7 +23,7 @@ export default async function loaderImages(
     return arr;
   }
 
-  const shuffledData = shuffleArray(data)?.slice(0, 6);
+  const shuffledData = shuffleArray(data)?.slice(0, 5);
 
   if (isError) {
     res.status(500).json(shuffledData);

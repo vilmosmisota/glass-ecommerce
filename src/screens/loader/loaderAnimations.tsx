@@ -18,7 +18,7 @@ export default function LoaderAnimations({ handleChange }: Props) {
   const url = "/api/loaderImages";
   const { data, error } = useSWR<CleanedImage[]>(url, fetcher);
 
-  setTimeout(() => setLoading(false), 1500);
+  setTimeout(() => setLoading(false), 1600);
   useEffect(() => {
     if (data && !isLoading) {
       setEndLoading(true);
@@ -29,9 +29,10 @@ export default function LoaderAnimations({ handleChange }: Props) {
   const container = {
     show: {
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.7,
         delayChildren: 1,
         duration: 1,
+        delay: 0.5,
       },
       opacity: 1,
     },

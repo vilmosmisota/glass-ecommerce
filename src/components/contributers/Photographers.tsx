@@ -155,6 +155,7 @@ export default function Photographers({
                     alt="contributors portfolio image"
                     className="portfolio-img"
                     layout="responsive"
+                    loading="eager"
                   />
                 </motion.section>
               </motion.div>

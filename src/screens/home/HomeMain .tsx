@@ -2,6 +2,7 @@ import Image from "next/image";
 import { HomeMain } from "../../types/homeTypes";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../animations/commonAs";
+import overlayer from "../../assets/images/video-overlay.png";
 
 export default function Main(contents: HomeMain) {
   const {
@@ -15,14 +16,30 @@ export default function Main(contents: HomeMain) {
 
   return (
     <main className="homeBody-container">
-      {/* <article className="video-wrapper">
+      <article className="mainvideo-wrapper">
         <iframe
-          src="https://player.vimeo.com/video/648647757?title=0&byline=0&portrait=0"
+          src="https://player.vimeo.com/video/689200358?autoplay=1&loop=1&muted=1&controls=0"
+          width="640"
+          height="281"
           frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
+          allow="autoplay; fullscreen"
           allowFullScreen
         ></iframe>
-      </article> */}
+        <motion.div
+          className="overlayer"
+          variants={fadeIn}
+          initial={{ opacity: 1 }}
+          whileHover={{ opacity: 0 }}
+          whileTap={{ opacity: 0 }}
+        >
+          <Image
+            src={overlayer}
+            layout="responsive"
+            alt="overlay"
+            loading="eager"
+          />
+        </motion.div>
+      </article>
 
       <motion.article
         className="body-statement"
@@ -104,14 +121,14 @@ export default function Main(contents: HomeMain) {
           />
         </motion.div>
       </div>
-      <article className="video-wrapper">
+      {/* <article className="video-wrapper">
         <iframe
           src="https://player.vimeo.com/video/648647757?title=0&byline=0&portrait=0"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
         ></iframe>
-      </article>
+      </article> */}
     </main>
   );
 }
