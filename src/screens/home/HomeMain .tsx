@@ -15,6 +15,15 @@ export default function Main(contents: HomeMain) {
 
   return (
     <main className="homeBody-container">
+      {/* <article className="video-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/648647757?title=0&byline=0&portrait=0"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </article> */}
+
       <motion.article
         className="body-statement"
         variants={fadeIn}
@@ -95,32 +104,6 @@ export default function Main(contents: HomeMain) {
           />
         </motion.div>
       </div>
-      {/* <motion.article
-        className="last-statement"
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
-        <div>
-          <h3>{bodyStatement3}</h3>
-        </div>
-      </motion.article>
-      <motion.div
-        className=""
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
-        <Image
-          src={`https:${imgThree.url}`}
-          height={imgThree.height}
-          width={imgThree.width}
-          alt="book cover"
-          layout="responsive"
-        />
-      </motion.div> */}
       <article className="video-wrapper">
         <iframe
           src="https://player.vimeo.com/video/648647757?title=0&byline=0&portrait=0"

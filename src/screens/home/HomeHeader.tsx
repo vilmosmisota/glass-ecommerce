@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import logo from "../../assets/images/VO1.svg";
 import { HomeHeader } from "../../types/homeTypes";
+import Typewriter from "typewriter-effect";
 
 export default function Header(contents: HomeHeader) {
   const { statementOne, statementTwo, statementThree, cover } = contents;
@@ -42,6 +43,13 @@ export default function Header(contents: HomeHeader) {
           <Link href="/shop" passHref>
             <motion.button whileTap={{ scale: 0.9 }}>Shop</motion.button>
           </Link>
+        </div>
+        <div>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString("Shipping Now").start();
+            }}
+          />
         </div>
       </section>
     </header>
