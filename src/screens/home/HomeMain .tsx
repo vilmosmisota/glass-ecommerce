@@ -18,7 +18,7 @@ export default function Main(contents: HomeMain) {
     <main className="homeBody-container">
       <article className="mainvideo-wrapper">
         <iframe
-          src="https://player.vimeo.com/video/689200358?background=1&autoplay=1&loop=1&muted=1&controls=1"
+          src="https://player.vimeo.com/video/689200358?&autoplay=1&loop=1&autopause=0&muted=1"
           width="640"
           height="281"
           frameBorder="0"
