@@ -22,7 +22,7 @@ export default function Main(contents: HomeMain) {
           width="640"
           height="281"
           frameBorder="0"
-          allow="autoplay; fullscreen"
+          allow="autoplay"
           allowFullScreen
         ></iframe>
         <motion.div
