@@ -69,21 +69,24 @@
     }
 
     .header-img-container {
-      width: 350px;
+      max-width: 350px;
       text-align: center;
       margin: 0 auto;
+      width: 85%;
     }
 
     .button-wrapper {
       padding: 1.5rem 0;
+      width: 85%;
 
       button {
         font-size: $small-font-SS;
         box-shadow: none;
         border-radius: 0;
         border: $border;
-        width: 350px;
+        max-width: 350px;
         height: 40px;
+        width: 100%;
         background-color: $beige;
 
         &:hover {
