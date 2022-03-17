@@ -6,6 +6,7 @@
   margin-bottom: $marginBottom-SS;
   flex-direction: column-reverse;
   border: $border;
+  min-height: 750px;
 
   .statement-container {
     display: flex;
@@ -78,6 +79,7 @@
     .button-wrapper {
       padding: 1.5rem 0;
       width: 85%;
+      text-align: center;
 
       button {
         font-size: $small-font-SS;
