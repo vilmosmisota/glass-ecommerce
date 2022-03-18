@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { HomeMain } from "../../types/homeTypes";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 import { fadeIn } from "../../animations/commonAs";
 import overlayer from "../../assets/images/video-overlay.png";
+import useWindowDimensions from "../../utils/useWindowDimensions";
 
 export default function Main(contents: HomeMain) {
+  const { width, height } = useWindowDimensions();
+
   const {
     imgOne,
     imgTwo,
@@ -14,11 +17,19 @@ export default function Main(contents: HomeMain) {
     bodyStatement3,
   } = contents;
 
+  function handleVideoRendering(width: number | undefined): string {
+    if (typeof width === "undefined" || width > 840) {
+      return "https://player.vimeo.com/video/689200358?&autoplay=1&loop=1&muted=1&controls=0";
+    }
+
+    return "https://player.vimeo.com/video/689200358?&autoplay=1&loop=1&autopause=0&muted=1";
+  }
+
   return (
     <main className="homeBody-container">
       <article className="mainvideo-wrapper">
         <iframe
-          src="https://player.vimeo.com/video/689200358?&autoplay=1&loop=1&autopause=0&muted=1"
+          src={handleVideoRendering(width)}
           width="640"
           height="281"
           frameBorder="0"
@@ -29,8 +40,7 @@ export default function Main(contents: HomeMain) {
           className="overlayer"
           variants={fadeIn}
           initial={{ opacity: 1 }}
-          whileHover={{ opacity: 0 }}
-          whileTap={{ opacity: 0 }}
+          whileHover={{ opacity: 0, transition: { delay: 0.4, duration: 0.5 } }}
         >
           <Image
             src={overlayer}

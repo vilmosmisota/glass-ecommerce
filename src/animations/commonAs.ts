@@ -24,7 +24,7 @@ export const fadeIn = {
     y: [-100, 20, 0],
     transition: {
       duration: 0.7,
-      delay: 1,
+      delay: 0.5,
     },
   },
 };
